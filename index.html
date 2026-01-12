@@ -90,7 +90,6 @@
         }
 
         .header-left { display: flex; flex-direction: column; gap: 0.15rem; }
-
         .header-countdown { font-size: 0.7rem; color: var(--text-gray); }
 
         .logo {
@@ -152,6 +151,11 @@
             .glass-card { padding: 1.5rem; }
             .story-card { padding: 1.5rem; }
             .guarantee { padding: 2.5rem 1.5rem; }
+            .scorecard-preview { padding: 1.25rem; }
+            .report-detail { font-size: 0.75rem; }
+            .report-summary-item ul { font-size: 0.75rem; }
+            .report-verdict { font-size: 0.8rem; }
+            .scorecard-label { font-size: 0.8rem; }
         }
 
         .hero { text-align: center; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 2rem 0; }
@@ -238,6 +242,43 @@
         .reward-card.everyone .reward-rank { color: var(--accent-green); }
         .reward-title { font-size: 1rem; font-weight: 600; color: var(--text-white); margin-bottom: 0.5rem; }
         .reward-desc { font-size: 0.85rem; color: var(--text-gray); line-height: 1.5; }
+
+        .scorecard-preview { margin-top: 2.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .scorecard-preview h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; color: var(--text-white); }
+        .scorecard-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--glass-border); }
+        .scorecard-item:last-child { border-bottom: none; }
+        .scorecard-label { font-size: 0.9rem; color: var(--text-light); }
+        .scorecard-bar-container { display: flex; align-items: center; gap: 0.75rem; flex: 1; max-width: 200px; }
+        .scorecard-bar { flex: 1; height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; }
+        .scorecard-bar-fill { height: 100%; border-radius: 4px; }
+        .scorecard-bar-fill.high { background: var(--accent-green); }
+        .scorecard-bar-fill.medium { background: var(--accent-orange); }
+        .scorecard-bar-fill.low { background: var(--accent-red); }
+        .scorecard-score { font-size: 0.85rem; font-weight: 600; min-width: 35px; text-align: right; }
+        .scorecard-score.high { color: var(--accent-green); }
+        .scorecard-score.medium { color: var(--accent-orange); }
+        .scorecard-score.low { color: var(--accent-red); }
+        .scorecard-note { text-align: center; font-size: 0.8rem; color: var(--text-gray); margin-top: 1.5rem; }
+
+        .report-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: 12px; margin-bottom: 1.5rem; }
+        .report-rank, .report-overall { font-size: 0.9rem; color: var(--text-gray); }
+        .report-rank span, .report-overall span { font-weight: 700; color: var(--accent-orange); font-size: 1.1rem; }
+        .report-section { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); }
+        .report-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .report-section-title { font-size: 0.95rem; font-weight: 700; color: var(--text-white); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border); }
+        .report-subsection { margin-bottom: 1.25rem; padding-left: 0.5rem; }
+        .report-subsection:last-child { margin-bottom: 0; }
+        .report-detail { font-size: 0.8rem; color: var(--text-gray); line-height: 1.6; margin-top: 0.5rem; padding-left: 0.5rem; border-left: 2px solid var(--glass-border); }
+        .report-detail strong { color: var(--text-light); }
+        .report-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+        @media (max-width: 500px) { .report-summary { grid-template-columns: 1fr; } .report-header { flex-direction: column; gap: 0.5rem; text-align: center; } }
+        .report-summary-item { background: var(--glass-bg); border-radius: 10px; padding: 1rem; }
+        .report-summary-item.strength { border-left: 3px solid var(--accent-green); }
+        .report-summary-item.improve { border-left: 3px solid var(--accent-orange); }
+        .report-summary-item strong { display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-light); }
+        .report-summary-item ul { margin: 0; padding-left: 1.25rem; font-size: 0.8rem; color: var(--text-gray); line-height: 1.7; }
+        .report-verdict { background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 10px; padding: 1rem; font-size: 0.85rem; color: var(--text-gray); line-height: 1.6; }
+        .report-verdict strong { color: var(--accent-cyan); }
 
         .about-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
         .about-grid { display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start; }
@@ -524,6 +565,139 @@
             <p style="text-align: center; margin-top: 1.5rem; color: var(--text-gray); font-size: 0.9rem;">
                 <strong style="color: var(--text-light);">Full transparency:</strong> I'll publish the top 3 answers so everyone can compare, learn, and see exactly why they won.
             </p>
+
+            <div class="scorecard-preview">
+                <h3>📊 Sample Performance Report (what you'll receive)</h3>
+
+                <div class="report-header">
+                    <div class="report-rank">Your Rank: <span>47</span> / 156 participants</div>
+                    <div class="report-overall">Overall Score: <span>74</span>/100</div>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">Behavioral Assessment (70%)</div>
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Ownership &amp; Initiative</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill high" style="width: 85%;"></div></div>
+                                <span class="scorecard-score high">85</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>What you did well:</strong> Your college fest example showed clear ownership. You identified the vendor problem early, took initiative without being asked, and followed through despite pushback from seniors. The specific details (3 vendors, ₹15k saved, 2-day timeline) made it credible.
+                        </div>
+                        <div class="report-detail">
+                            <strong>What was missing:</strong> You didn't mention what you learned or how you'd handle it differently. Interviewers want to see self-reflection, not just "I did X and it worked."
+                        </div>
+                    </div>
+
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Problem Solving Approach</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill high" style="width: 78%;"></div></div>
+                                <span class="scorecard-score high">78</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>What you did well:</strong> Clear STAR structure. You broke down the API integration problem into smaller chunks and prioritized based on user impact. Good instinct.
+                        </div>
+                        <div class="report-detail">
+                            <strong>What was missing:</strong> You jumped to the solution too fast. Spend more time explaining WHY you chose that approach over alternatives. "I considered X but chose Y because..." shows deeper thinking.
+                        </div>
+                    </div>
+
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Communication Clarity</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill medium" style="width: 68%;"></div></div>
+                                <span class="scorecard-score medium">68</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>What you did well:</strong> Concise answers. No unnecessary fluff. You respected the reader's time.
+                        </div>
+                        <div class="report-detail">
+                            <strong>What was missing:</strong> Some answers felt rushed. Q3 needed more context. The evaluator shouldn't have to guess what "the system" or "the team" means. Be specific.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">DSA Assessment (30%)</div>
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Problem 1: Array Manipulation</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill high" style="width: 100%;"></div></div>
+                                <span class="scorecard-score high">✓</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">All test cases passed. O(n) solution. Clean code.</div>
+                    </div>
+
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Problem 2: Graph Traversal</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill medium" style="width: 60%;"></div></div>
+                                <span class="scorecard-score medium">6/10</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>Issue:</strong> You used BFS but the problem required shortest path with weighted edges. BFS only works for unweighted graphs. Dijkstra's algorithm was the right choice here. 4 test cases failed due to incorrect distances.
+                        </div>
+                        <div class="report-detail">
+                            <strong>Study:</strong> Review when to use BFS vs Dijkstra vs Bellman-Ford. This is a common interview trap.
+                        </div>
+                    </div>
+
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Problem 3: Dynamic Programming</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill low" style="width: 30%;"></div></div>
+                                <span class="scorecard-score low">3/10</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>Issue:</strong> Recursive solution without memoization. Correct logic but TLE on larger inputs. You identified the subproblem correctly but didn't optimize.
+                        </div>
+                        <div class="report-detail">
+                            <strong>Study:</strong> Practice converting recursive solutions to bottom-up DP. Start with classic problems: Fibonacci, Coin Change, LCS.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">Overall Assessment</div>
+                    <div class="report-summary">
+                        <div class="report-summary-item strength">
+                            <strong>Your Strengths</strong>
+                            <ul>
+                                <li>Real, specific examples with measurable outcomes</li>
+                                <li>Good instinct for breaking down problems</li>
+                                <li>Clean, readable code structure</li>
+                            </ul>
+                        </div>
+                        <div class="report-summary-item improve">
+                            <strong>Focus Areas</strong>
+                            <ul>
+                                <li>Add self-reflection to behavioral answers</li>
+                                <li>Graph algorithms: weighted vs unweighted</li>
+                                <li>DP optimization: memoization and tabulation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="report-verdict">
+                        <strong>Interview Readiness:</strong> You're close. Your behavioral answers would pass most first rounds. DSA needs 2-3 weeks of focused practice on graphs and DP. Target: 50 medium-level problems mixing both topics.
+                    </div>
+                </div>
+
+                <p class="scorecard-note">Every participant receives this level of detailed, personalized feedback. This is what ₹499 gets you.</p>
+            </div>
         </section>
 
         <section class="about-section" id="about-section">
@@ -640,6 +814,7 @@
                         <p>You'll also document <strong>real situations from your own life</strong> where you've demonstrated leadership principles. Ownership, bias for action, learning from failure, delivering results.</p>
                         <p style="background: rgba(6, 182, 212, 0.1); border-radius: 8px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.9rem;"><strong style="color: var(--accent-cyan);">Sample question:</strong> "Tell me about a time you had to complete a project with unclear requirements. What did you do?"</p>
                         <p style="font-size: 0.85rem; color: var(--text-gray);">I'm evaluating your thinking and actions, not your English. Write in whatever language you're comfortable with. Clarity of thought matters, grammar doesn't.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-gray);"><strong style="color: var(--text-light);">Format:</strong> Written responses only. No video. No group discussion. No presentation. Just you, your laptop, and your answers.</p>
                         <p class="challenge-warning">Your examples will be background checked with references. Don't make things up.</p>
                     </div>
                 </div>
@@ -775,7 +950,6 @@
     </div>
 
     <script>
-        // Countdown Timer
         function updateCountdown() {
             const deadline = new Date('2026-01-20T23:59:59+05:30').getTime();
             const now = new Date().getTime();
@@ -800,13 +974,11 @@
         updateCountdown();
         setInterval(updateCountdown, 1000);
 
-        // Hamburger menu toggle
         document.getElementById('hamburger').addEventListener('click', function() {
             this.classList.toggle('active');
             document.getElementById('navMenu').classList.toggle('active');
         });
 
-        // Close menu when clicking a link
         document.querySelectorAll('.nav-menu a').forEach(function(link) {
             link.addEventListener('click', function() {
                 document.getElementById('hamburger').classList.remove('active');
@@ -814,7 +986,6 @@
             });
         });
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();

@@ -128,6 +128,17 @@
             justify-content: space-between;
         }
 
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .header-countdown {
+            font-size: 0.7rem;
+            color: var(--text-gray);
+        }
+
         .logo {
             font-size: 1.35rem;
             font-weight: 700;
@@ -413,6 +424,88 @@
 
         .guarantee-subtext { color: rgba(255,255,255,0.9); font-size: 1.1rem; }
 
+        /* Rewards Tiers */
+        .rewards-section {
+            padding: 3rem 0;
+        }
+
+        .rewards-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .rewards-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 800px) {
+            .rewards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .rewards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .reward-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .reward-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .reward-card.top-3 {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 88, 12, 0.1) 100%);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+
+        .reward-rank {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .reward-card.top-3 .reward-rank { color: var(--accent-orange); }
+        .reward-card.top-10 .reward-rank { color: var(--accent-cyan); }
+        .reward-card.top-50 .reward-rank { color: var(--accent-purple); }
+        .reward-card.everyone .reward-rank { color: var(--accent-green); }
+
+        .reward-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .reward-desc {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
         .who-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -685,6 +778,55 @@
         }
 
         .footer a { color: var(--accent-orange); text-decoration: none; }
+
+        /* Countdown Timer */
+        .countdown-wrapper {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 0.75rem;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .countdown-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            min-width: 70px;
+            width: 70px;
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+            line-height: 1;
+        }
+
+        .countdown-unit {
+            font-size: 0.7rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+
+        .countdown-expired {
+            color: var(--accent-red);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 <body>
@@ -695,7 +837,10 @@
     </div>
 
     <header class="site-header">
-        <a href="#" class="logo">IndustryReady</a>
+        <div class="header-left">
+            <a href="#" class="logo">IndustryReady</a>
+            <div class="header-countdown">Registration closes Jan 20th</div>
+        </div>
         <nav>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#problem-section">Problem</a></li>
@@ -851,18 +996,39 @@
                 <p class="guarantee-text">Top 3 get guaranteed interviews.</p>
                 <p class="guarantee-subtext">Not "we'll try." Not "maybe." <strong>Guaranteed.</strong> You still have to clear the interview. We're not handing out jobs. But you will get the shot.</p>
                 <p class="guarantee-subtext" style="margin-top: 0.75rem; opacity: 0.9;">No resume. No college name. Just what you show up and prove.</p>
+                <p class="guarantee-subtext" style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.85; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">🔒 If I can't secure interviews for the top 3, I'll refund everyone. No questions asked.</p>
             </div>
         </section>
 
-        <section class="who-grid">
-            <div class="who-card for-you">
-                <h3><span>✓</span> This is for you if</h3>
-                <p>You're in your final year or pre-final year. You've been grinding but can't get past the filters. You want a fair shot to prove what you can do.</p>
+        <!-- Rewards Tiers -->
+        <section class="rewards-section">
+            <h2>Everyone walks away with something</h2>
+            <p class="rewards-subtitle">Not just the winners. Here's what you get based on your performance:</p>
+            <div class="rewards-grid">
+                <div class="reward-card top-3">
+                    <div class="reward-rank">🏆 Top 3</div>
+                    <div class="reward-title">Guaranteed Interviews</div>
+                    <div class="reward-desc">Real interviews with companies in my network. This is the main prize.</div>
+                </div>
+                <div class="reward-card top-10">
+                    <div class="reward-rank">⭐ Top 10</div>
+                    <div class="reward-title">LinkedIn Shoutout</div>
+                    <div class="reward-desc">A public testimonial from me on LinkedIn about your performance. Social proof that matters.</div>
+                </div>
+                <div class="reward-card top-50">
+                    <div class="reward-rank">📄 Top 50</div>
+                    <div class="reward-title">Resume Review</div>
+                    <div class="reward-desc">Personal 1-on-1 resume review from someone who's seen 100+ resumes.</div>
+                </div>
+                <div class="reward-card everyone">
+                    <div class="reward-rank">✓ Everyone</div>
+                    <div class="reward-title">Detailed Scorecard</div>
+                    <div class="reward-desc">Know exactly where you stand. What you did well. What to improve. No black boxes.</div>
+                </div>
             </div>
-            <div class="who-card not-for-you">
-                <h3><span>✕</span> This is not for you if</h3>
-                <p>You're looking for shortcuts or handholding. You want a certificate to add to LinkedIn. You're not willing to show up and compete.</p>
-            </div>
+            <p style="text-align: center; margin-top: 1.5rem; color: var(--text-gray); font-size: 0.9rem;">
+                <strong style="color: var(--text-light);">Full transparency:</strong> We'll publish the top 3 answers so everyone can compare, learn, and see exactly why they won.
+            </p>
         </section>
 
         <section class="about-section" id="about-section">
@@ -873,9 +1039,9 @@
                 About Me
             </div>
             <div class="about-grid">
-					<div class="about-photo">
-						<img src="profile.jpg" alt="Hari" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
-					</div>
+				<div class="about-photo">
+					<img src="profile.jpg" alt="Hari" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+				</div>
                 <div class="about-content">
                     <h2>Hari</h2>
                     <p class="about-title">Ex-Amazon SDE · MS in AI, Northeastern University</p>
@@ -924,8 +1090,8 @@
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Show up in Chennai (February 2025)</h3>
-                        <p>Everyone in the same room, same time. You'll receive the exact date and venue after registration.</p>
+                        <h3>Show up in Chennai (15th February 2026)</h3>
+                        <p>Everyone in the same room, same time. Venue details will be shared with registered participants.</p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -977,7 +1143,9 @@
                     <div class="challenge-card-content">
                         <p>You'll be given real-world scenarios and asked to demonstrate how you think, lead, and solve problems.</p>
                         <p>You'll also document <strong>real situations from your own life</strong> where you've demonstrated leadership principles. Ownership, bias for action, learning from failure, delivering results.</p>
-                        <p class="challenge-warning">These will be background checked with your references. Don't make things up.</p>
+                        <p style="background: rgba(6, 182, 212, 0.1); border-radius: 8px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.9rem;"><strong style="color: var(--accent-cyan);">Sample question:</strong> "Tell me about a time you had to complete a project with unclear requirements. What did you do?"</p>
+                        <p style="font-size: 0.85rem; color: var(--text-gray);">We're evaluating your thinking and actions, not your English. Write in whatever language you're comfortable with. Clarity of thought matters, grammar doesn't.</p>
+                        <p class="challenge-warning">Your examples will be background checked with references. Don't make things up.</p>
                     </div>
                 </div>
                 <div class="challenge-card dsa">
@@ -988,6 +1156,9 @@
                     <div class="challenge-card-content">
                         <p>Timed coding problems testing data structures and algorithms fundamentals.</p>
                         <p>Auto-graded with test cases. Standard interview-level difficulty.</p>
+                        <p style="margin-top: 0.75rem;"><strong style="color: var(--text-light);">What to study:</strong> Don't just memorize LeetCode patterns. Understand <em>why</em> algorithms work. Know your data structures deeply.</p>
+                        <p style="background: rgba(6, 182, 212, 0.1); border-radius: 8px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.9rem;"><strong style="color: var(--accent-cyan);">Example question:</strong> "What data structure would you use for Kruskal's algorithm and why? How would you optimize it?"</p>
+                        <p style="font-size: 0.85rem; color: var(--text-gray);">We're testing if you understand trade-offs, not if you've memorized solutions. Know your arrays, trees, graphs, heaps, and hash maps inside out.</p>
                     </div>
                 </div>
             </div>
@@ -1023,11 +1194,7 @@
                 </div>
                 <div class="faq-item">
                     <h3>What if I'm not in the top 3?</h3>
-                    <p>Everyone who completes the challenge gets detailed feedback on their performance. You'll know exactly where you stand and what to work on.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What's the challenge format?</h3>
-                    <p>Timed coding problems that test real problem-solving ability. The kind of skills that actually matter in interviews. Details shared with registered participants.</p>
+                    <p>Top 10 gets a public LinkedIn shoutout from me. Top 50 gets a personal resume review. Everyone gets a detailed scorecard showing exactly where you stand. You won't walk away empty-handed.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Why ₹499?</h3>
@@ -1041,16 +1208,45 @@
                     <h3>Can I get a refund if I can't attend?</h3>
                     <p>No. The fee is non-refundable because it's meant to filter for commitment. If you're not sure you can make it to Chennai in February, don't register yet.</p>
                 </div>
+                <div class="faq-item">
+                    <h3>What time does it start?</h3>
+                    <p>10 AM to 1 PM on 15th February 2026. Be there by 9:30 AM for check-in. The challenge runs for exactly 3 hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I bring?</h3>
+                    <p>Laptop and charger (mandatory). Aadhar card and college ID (for identity verification). You can bring your phone but it's not allowed inside the exam hall. Keep it in your bag outside.</p>
+                </div>
             </div>
         </section>
 
         <section class="cta-section">
+            <div class="countdown-wrapper">
+                <p class="countdown-label">Registration closes in:</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">--</div>
+                        <div class="countdown-unit">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">--</div>
+                        <div class="countdown-unit">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">--</div>
+                        <div class="countdown-unit">Mins</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">--</div>
+                        <div class="countdown-unit">Secs</div>
+                    </div>
+                </div>
+            </div>
             <div class="event-tags">
                 <div class="event-tag">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                     </svg>
-                    February 2025
+                    15th Feb 2026, 10 AM
                 </div>
                 <div class="event-tag">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -1084,11 +1280,38 @@
     </div>
 
     <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const deadline = new Date('2026-01-20T23:59:59+05:30').getTime();
+            const now = new Date().getTime();
+            const distance = deadline - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<p class="countdown-expired">Registration closed</p>';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Hamburger menu toggle
         document.getElementById('hamburger').addEventListener('click', function() {
             this.classList.toggle('active');
             document.getElementById('navMenu').classList.toggle('active');
         });
 
+        // Close menu when clicking a link
         document.querySelectorAll('.nav-menu a').forEach(function(link) {
             link.addEventListener('click', function() {
                 document.getElementById('hamburger').classList.remove('active');
@@ -1096,6 +1319,7 @@
             });
         });
 
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1111,3 +1335,4 @@
     </script>
 </body>
 </html>
+

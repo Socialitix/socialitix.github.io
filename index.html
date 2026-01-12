@@ -4,18 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prove Yourself | IndustryReady Challenge</title>
-
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXX2KDSDVL"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-MXX2KDSDVL');
-	</script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -214,6 +202,18 @@
         .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
         .card-desc { font-size: 0.95rem; color: var(--text-gray); line-height: 1.6; }
 
+        .fairness-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .fairness-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-white); }
+        .fairness-card p { color: var(--text-gray); font-size: 1rem; line-height: 1.7; max-width: 600px; margin: 0 auto; }
+        .fairness-card p strong { color: var(--accent-purple); }
+
         .divider { text-align: center; padding: 2rem 0; }
         .divider-arrow { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 50%; color: var(--accent-orange); animation: bounce 2s ease-in-out infinite; }
         .divider-arrow svg { width: 24px; height: 24px; }
@@ -228,9 +228,10 @@
         .rewards-section { padding: 3rem 0; }
         .rewards-section h2 { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; }
         .rewards-subtitle { text-align: center; color: var(--text-gray); margin-bottom: 2rem; font-size: 1rem; }
-        .rewards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-        @media (max-width: 800px) { .rewards-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 500px) { .rewards-grid { grid-template-columns: 1fr; } }
+        .rewards-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+        @media (max-width: 900px) { .rewards-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 600px) { .rewards-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 400px) { .rewards-grid { grid-template-columns: 1fr; } }
 
         .reward-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; }
         .reward-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.2); }
@@ -238,6 +239,7 @@
         .reward-rank { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
         .reward-card.top-3 .reward-rank { color: var(--accent-orange); }
         .reward-card.top-10 .reward-rank { color: var(--accent-cyan); }
+        .reward-card.top-20 .reward-rank { color: #eab308; }
         .reward-card.top-50 .reward-rank { color: var(--accent-purple); }
         .reward-card.everyone .reward-rank { color: var(--accent-green); }
         .reward-title { font-size: 1rem; font-weight: 600; color: var(--text-white); margin-bottom: 0.5rem; }
@@ -250,7 +252,7 @@
         .scorecard-label { font-size: 0.9rem; color: var(--text-light); }
         .scorecard-bar-container { display: flex; align-items: center; gap: 0.75rem; flex: 1; max-width: 200px; }
         .scorecard-bar { flex: 1; height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; }
-        .scorecard-bar-fill { height: 100%; border-radius: 4px; }
+        .scorecard-bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
         .scorecard-bar-fill.high { background: var(--accent-green); }
         .scorecard-bar-fill.medium { background: var(--accent-orange); }
         .scorecard-bar-fill.low { background: var(--accent-red); }
@@ -271,7 +273,7 @@
         .report-detail { font-size: 0.8rem; color: var(--text-gray); line-height: 1.6; margin-top: 0.5rem; padding-left: 0.5rem; border-left: 2px solid var(--glass-border); }
         .report-detail strong { color: var(--text-light); }
         .report-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-        @media (max-width: 500px) { .report-summary { grid-template-columns: 1fr; } .report-header { flex-direction: column; gap: 0.5rem; text-align: center; } }
+        @media (max-width: 500px) { .report-summary { grid-template-columns: 1fr; } .report-header { flex-direction: column; gap: 0.5rem; text-align: center; } .scorecard-item { flex-direction: column; align-items: flex-start; gap: 0.5rem; } .scorecard-bar-container { max-width: 100%; width: 100%; } }
         .report-summary-item { background: var(--glass-bg); border-radius: 10px; padding: 1rem; }
         .report-summary-item.strength { border-left: 3px solid var(--accent-green); }
         .report-summary-item.improve { border-left: 3px solid var(--accent-orange); }
@@ -327,7 +329,6 @@
         .challenge-card-content p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
         .challenge-card-content p:last-child { margin-bottom: 0; }
         .challenge-card-content p strong { color: var(--text-light); }
-        .challenge-warning { color: var(--accent-orange) !important; font-weight: 500; font-size: 0.9rem !important; }
         .challenge-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem 2.5rem; padding: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; }
         .challenge-detail-item { display: flex; align-items: center; gap: 0.5rem; color: var(--text-gray); font-size: 0.9rem; }
         .challenge-detail-item svg { width: 20px; height: 20px; color: var(--accent-orange); flex-shrink: 0; }
@@ -466,6 +467,11 @@
             </div>
         </section>
 
+        <div class="fairness-card">
+            <h3>🎯 This challenge is NOT for Tier-1 college students</h3>
+            <p>If you already have 5 internships and an IIT tag, this isn't for you. This is built for students who keep getting <strong>filtered out by resumes</strong> before anyone looks at their skills. A level playing field where your college name is hidden and only your work speaks.</p>
+        </div>
+
         <div class="divider">
             <div class="divider-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -533,7 +539,7 @@
                 <p class="guarantee-text">Top 3 get guaranteed interviews.</p>
                 <p class="guarantee-subtext">Not "we'll try." Not "maybe." <strong>Guaranteed.</strong> You still have to clear the interview. I'm not handing out jobs. But you will get the shot.</p>
                 <p class="guarantee-subtext" style="margin-top: 0.75rem; opacity: 0.9;">No resume. No college name. Just what you show up and prove.</p>
-                <p class="guarantee-subtext" style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.85; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">🔒 If I can't secure interviews for the top 3, I'll refund everyone. No questions asked.</p>
+                <p class="guarantee-subtext" style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.85; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">🔒 If I can't secure interviews with companies offering 8+ LPA for the top 3 by February 20th, I'll refund everyone. Full amount, no questions, within 7 days.</p>
             </div>
         </section>
 
@@ -550,6 +556,11 @@
                     <div class="reward-rank">⭐ Top 10</div>
                     <div class="reward-title">LinkedIn Shoutout</div>
                     <div class="reward-desc">A public testimonial from me on LinkedIn about your performance. Social proof that matters.</div>
+                </div>
+                <div class="reward-card top-20">
+                    <div class="reward-rank">🎟️ Top 20</div>
+                    <div class="reward-title">Free Next Batch</div>
+                    <div class="reward-desc">Free entry to the next IndustryReady Challenge. Another shot at proving yourself.</div>
                 </div>
                 <div class="reward-card top-50">
                     <div class="reward-rank">📄 Top 50</div>
@@ -568,7 +579,7 @@
 
             <div class="scorecard-preview">
                 <h3>📊 Sample Performance Report (what you'll receive)</h3>
-
+                
                 <div class="report-header">
                     <div class="report-rank">Your Rank: <span>47</span> / 156 participants</div>
                     <div class="report-overall">Overall Score: <span>74</span>/100</div>
@@ -578,7 +589,7 @@
                     <div class="report-section-title">Behavioral Assessment (70%)</div>
                     <div class="report-subsection">
                         <div class="scorecard-item">
-                            <span class="scorecard-label">Ownership &amp; Initiative</span>
+                            <span class="scorecard-label">Ownership & Initiative</span>
                             <div class="scorecard-bar-container">
                                 <div class="scorecard-bar"><div class="scorecard-bar-fill high" style="width: 85%;"></div></div>
                                 <span class="scorecard-score high">85</span>
@@ -696,7 +707,7 @@
                     </div>
                 </div>
 
-                <p class="scorecard-note">Every participant receives this level of detailed, personalized feedback. This is what ₹499 gets you.</p>
+                <p class="scorecard-note">Every participant receives this level of detailed, personalized feedback — written by me personally, not generated by AI.</p>
             </div>
         </section>
 
@@ -743,6 +754,7 @@
                 <p class="story-quote">"One of my friends applied for 500 job positions. 17 replies. 0 offers."<br><span style="font-size: 0.85rem; opacity: 0.7;">- Final Year, Data Science</span></p>
                 <p>Students aren't struggling because they lack skills. They're struggling because <strong>the system doesn't give them a chance to prove those skills.</strong></p>
                 <p>This challenge exists to change that. One fair shot. No filters. No black boxes. Just your skills against everyone else's.</p>
+                <p><strong style="color: var(--accent-orange);">This is the founding batch.</strong> No testimonials yet because no one has done this before. You're not just a participant — you're helping prove that merit can win.</p>
             </div>
         </section>
 
@@ -781,7 +793,7 @@
                     <div class="step-number">5</div>
                     <div class="step-content">
                         <h3>Top 3 get guaranteed interviews</h3>
-                        <p><strong>Guaranteed.</strong> Not "we'll try." Not "maybe if companies are interested." You still have to clear the interview. I'm not handing out jobs. But you will get the shot.</p>
+                        <p><strong>Guaranteed.</strong> Not "we'll try." Not "maybe if companies are interested." Interviews with companies offering 8+ LPA. You still have to clear the interview. I'm not handing out jobs. But you will get the shot.</p>
                     </div>
                 </div>
             </div>
@@ -795,12 +807,13 @@
                 The Challenge
             </div>
             <h2 class="section-title">What I'm actually looking for</h2>
-
+            
             <div class="challenge-intro">
                 <p>I'm not looking for people who can just solve LeetCode problems. <strong>Everyone can do that now.</strong></p>
                 <p>I'm looking for the <strong>next generation of leaders</strong>. People who take ownership, solve real problems, and have the attitude that companies actually want to hire.</p>
                 <p>I don't look at your resume. Your college name doesn't matter here. <strong>What you present in the challenge IS your resume.</strong></p>
                 <p>That's why this challenge is weighted <strong>70% behavioral, 30% DSA.</strong></p>
+                <p style="font-size: 0.95rem; color: var(--text-gray);">Why 70% behavioral? Because every company I've worked with says the same thing: "We can teach skills. We can't teach attitude." DSA gets you past the filter. Behavioral gets you the offer.</p>
             </div>
 
             <div class="challenge-grid">
@@ -812,10 +825,10 @@
                     <div class="challenge-card-content">
                         <p>You'll be given real-world scenarios and asked to demonstrate how you think, lead, and solve problems.</p>
                         <p>You'll also document <strong>real situations from your own life</strong> where you've demonstrated leadership principles. Ownership, bias for action, learning from failure, delivering results.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-gray);"><strong style="color: var(--text-light);">Themes you'll be asked about:</strong> ownership, handling ambiguity, learning from failure, delivering under pressure.</p>
                         <p style="background: rgba(6, 182, 212, 0.1); border-radius: 8px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.9rem;"><strong style="color: var(--accent-cyan);">Sample question:</strong> "Tell me about a time you had to complete a project with unclear requirements. What did you do?"</p>
                         <p style="font-size: 0.85rem; color: var(--text-gray);">I'm evaluating your thinking and actions, not your English. Write in whatever language you're comfortable with. Clarity of thought matters, grammar doesn't.</p>
-                        <p style="font-size: 0.85rem; color: var(--text-gray);"><strong style="color: var(--text-light);">Format:</strong> Written responses only. No video. No group discussion. No presentation. Just you, your laptop, and your answers.</p>
-                        <p class="challenge-warning">Your examples will be background checked with references. Don't make things up.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-gray);"><strong style="color: var(--text-light);">Format:</strong> 4 questions, ~100 words each. Written responses only — no video, no MCQs, no group discussion. 30 mins per question, 2 hours total. Just you, your laptop, and your answers.</p>
                     </div>
                 </div>
                 <div class="challenge-card dsa">
@@ -825,7 +838,7 @@
                     </div>
                     <div class="challenge-card-content">
                         <p>Timed coding problems testing data structures and algorithms fundamentals.</p>
-                        <p>Auto-graded with test cases. Standard interview-level difficulty.</p>
+                        <p><strong style="color: var(--text-light);">Format:</strong> 2 problems, 30 mins each, 1 hour total. Each problem has test cases to pass + a ~100 word written explanation of your approach. Difficulty: 1 medium, 1 medium-hard.</p>
                         <p style="margin-top: 0.75rem;"><strong style="color: var(--text-light);">What to study:</strong> Don't just memorize LeetCode patterns. Understand <em>why</em> algorithms work. Know your data structures deeply.</p>
                         <p style="background: rgba(6, 182, 212, 0.1); border-radius: 8px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.9rem;"><strong style="color: var(--accent-cyan);">Example question:</strong> "What data structure would you use for Kruskal's algorithm and why? How would you optimize it?"</p>
                         <p style="font-size: 0.85rem; color: var(--text-gray);">I'm testing if you understand trade-offs, not if you've memorized solutions. Know your arrays, trees, graphs, heaps, and hash maps inside out.</p>
@@ -845,12 +858,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span><strong>Evaluation:</strong> Behavioral reviewed using Amazon's Leadership Principles framework. DSA auto-graded.</span>
-                </div>
-                <div class="challenge-detail-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
-                    </svg>
-                    <span><strong>References required:</strong> Your real-life examples will be verified.</span>
                 </div>
             </div>
         </section>
@@ -945,7 +952,7 @@
         </section>
 
         <footer class="footer">
-            IndustryReady · Questions? <a href="mailto:noblenod@gmail.com">Contact us</a>
+            IndustryReady · Questions? <a href="mailto:hari@socialitix.org">Contact us</a>
         </footer>
     </div>
 

@@ -36,11 +36,7 @@
             --glass-border: rgba(255, 255, 255, 0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -53,10 +49,7 @@
 
         .bg-wrapper {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             z-index: -1;
             background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-gradient-1) 50%, var(--bg-gradient-2) 100%);
             overflow: hidden;
@@ -70,33 +63,9 @@
             animation: float 25s ease-in-out infinite;
         }
 
-        .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
-            top: -200px;
-            right: -150px;
-        }
-
-        .orb-2 {
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
-            bottom: -150px;
-            left: -150px;
-            animation-delay: -5s;
-            opacity: 0.2;
-        }
-
-        .orb-3 {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
-            top: 50%;
-            left: 40%;
-            animation-delay: -10s;
-            opacity: 0.15;
-        }
+        .orb-1 { width: 500px; height: 500px; background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan)); top: -200px; right: -150px; }
+        .orb-2 { width: 400px; height: 400px; background: linear-gradient(135deg, var(--accent-orange), var(--accent-red)); bottom: -150px; left: -150px; animation-delay: -5s; opacity: 0.2; }
+        .orb-3 { width: 300px; height: 300px; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green)); top: 50%; left: 40%; animation-delay: -10s; opacity: 0.15; }
 
         @keyframes float {
             0%, 100% { transform: translate(0, 0) scale(1); }
@@ -105,19 +74,11 @@
             75% { transform: translate(20px, 30px) scale(1.02); }
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 1; }
 
         .site-header {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             padding: 1rem 2rem;
             z-index: 100;
             background: rgba(10, 10, 26, 0.95);
@@ -128,16 +89,9 @@
             justify-content: space-between;
         }
 
-        .header-left {
-            display: flex;
-            flex-direction: column;
-            gap: 0.15rem;
-        }
+        .header-left { display: flex; flex-direction: column; gap: 0.15rem; }
 
-        .header-countdown {
-            font-size: 0.7rem;
-            color: var(--text-gray);
-        }
+        .header-countdown { font-size: 0.7rem; color: var(--text-gray); }
 
         .logo {
             font-size: 1.35rem;
@@ -149,63 +103,21 @@
             background-clip: text;
         }
 
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-menu a {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
+        .nav-menu { display: flex; align-items: center; gap: 2rem; list-style: none; }
+        .nav-menu a { color: var(--text-gray); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s ease; }
         .nav-menu a:hover { color: var(--text-white); }
+        .nav-menu .nav-cta { background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%); color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; }
 
-        .nav-menu .nav-cta {
-            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            gap: 5px;
-            width: 28px;
-            height: 28px;
-            cursor: pointer;
-            z-index: 101;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: var(--text-white);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
+        .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 28px; height: 28px; cursor: pointer; z-index: 101; }
+        .hamburger span { display: block; width: 100%; height: 2px; background: var(--text-white); border-radius: 2px; transition: all 0.3s ease; }
         .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
         @media (max-width: 768px) {
             .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 75%;
-                max-width: 300px;
-                height: 100vh;
+                position: fixed; top: 0; right: -100%;
+                width: 75%; max-width: 300px; height: 100vh;
                 background: rgba(10, 10, 26, 0.98);
                 backdrop-filter: blur(16px);
                 flex-direction: column;
@@ -220,15 +132,29 @@
             .hamburger { display: flex; }
         }
 
-        .hero {
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 2rem 0;
+        @media (max-width: 400px) {
+            .subhead { font-size: 0.95rem; }
+            .hero-note { font-size: 0.85rem; }
+            .hero-credibility { font-size: 0.8rem; }
+            .card-desc { font-size: 0.85rem; }
+            .guarantee-subtext { font-size: 0.95rem; }
+            .rewards-subtitle { font-size: 0.9rem; }
+            .reward-desc { font-size: 0.8rem; }
+            .about-content p { font-size: 0.9rem; }
+            .story-card p { font-size: 0.9rem; }
+            .step-content p { font-size: 0.85rem; }
+            .challenge-intro p { font-size: 0.9rem; }
+            .challenge-card-content p { font-size: 0.85rem; }
+            .challenge-detail-item { font-size: 0.8rem; }
+            .faq-item p { font-size: 0.8rem; }
+            .limited-text { font-size: 0.8rem; }
+            .container { padding: 0 1rem; }
+            .glass-card { padding: 1.5rem; }
+            .story-card { padding: 1.5rem; }
+            .guarantee { padding: 2.5rem 1.5rem; }
         }
+
+        .hero { text-align: center; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 2rem 0; }
 
         .headline {
             font-size: clamp(1.75rem, 5.5vw, 3.25rem);
@@ -242,131 +168,42 @@
             background-clip: text;
         }
 
-        .subhead {
-            font-size: clamp(1rem, 2.5vw, 1.35rem);
-            color: var(--text-gray);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
+        .subhead { font-size: clamp(1rem, 2.5vw, 1.35rem); color: var(--text-gray); max-width: 600px; margin: 0 auto 2rem; }
         .subhead strong { color: var(--accent-orange); font-weight: 600; }
 
         .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
+            display: inline-flex; align-items: center; gap: 0.6rem;
             background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 600;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            text-decoration: none;
+            color: white; font-size: 1.1rem; font-weight: 600;
+            padding: 1rem 2rem; border-radius: 12px; text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 4px 24px rgba(249, 115, 22, 0.4);
         }
-
-        .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(249, 115, 22, 0.5);
-        }
-
+        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(249, 115, 22, 0.5); }
         .hero-cta svg { width: 20px; height: 20px; }
 
-        .hero-note {
-            margin-top: 1.25rem;
-            font-size: 0.95rem;
-            color: var(--text-gray);
-            font-style: italic;
-        }
-
-        .hero-credibility {
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: var(--text-gray);
-        }
-
+        .hero-note { margin-top: 1.25rem; font-size: 0.95rem; color: var(--text-gray); font-style: italic; }
+        .hero-credibility { margin-top: 1rem; font-size: 0.85rem; color: var(--text-gray); }
         .hero-credibility a { color: var(--accent-cyan); text-decoration: none; }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-gray);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
+        .scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--text-gray); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
         .scroll-arrow { width: 24px; height: 24px; animation: bounce 2s ease-in-out infinite; }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(6px); }
-        }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 
         .section { padding: 4rem 0; }
-
-        .section-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-
+        .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
         .section-label.problem { color: var(--accent-red); }
         .section-label.solution { color: var(--accent-green); }
+        .section-title { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; margin-bottom: 2.5rem; }
 
-        .section-title {
-            font-size: clamp(1.5rem, 4vw, 2.25rem);
-            font-weight: 700;
-            margin-bottom: 2.5rem;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-        }
-
+        .cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
         @media (max-width: 700px) { .cards-grid { grid-template-columns: 1fr; } }
 
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
+        .glass-card { background: var(--glass-bg); backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; transition: all 0.3s ease; }
+        .glass-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
 
-        .glass-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .card-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-        }
-
+        .card-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
         .card-icon svg { width: 28px; height: 28px; }
-
         .glass-card.problem .card-icon { background: rgba(239, 68, 68, 0.15); color: var(--accent-red); }
         .glass-card.solution .card-icon { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
 
@@ -374,459 +211,118 @@
         .card-desc { font-size: 0.95rem; color: var(--text-gray); line-height: 1.6; }
 
         .divider { text-align: center; padding: 2rem 0; }
-
-        .divider-arrow {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 50%;
-            color: var(--accent-orange);
-            animation: bounce 2s ease-in-out infinite;
-        }
-
+        .divider-arrow { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 50%; color: var(--accent-orange); animation: bounce 2s ease-in-out infinite; }
         .divider-arrow svg { width: 24px; height: 24px; }
 
-        .guarantee {
-            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 50%, #dc2626 100%);
-            border-radius: 24px;
-            padding: 3.5rem 2.5rem;
-            text-align: center;
-            margin: 2rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
+        .guarantee { background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 50%, #dc2626 100%); border-radius: 24px; padding: 3.5rem 2.5rem; text-align: center; margin: 2rem 0 4rem; position: relative; overflow: hidden; }
         .guarantee-content { position: relative; z-index: 1; }
-
-        .guarantee-icon {
-            width: 64px;
-            height: 64px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            margin: 0 auto 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
+        .guarantee-icon { width: 64px; height: 64px; background: rgba(255,255,255,0.2); border-radius: 50%; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; }
         .guarantee-icon svg { width: 32px; height: 32px; color: white; }
-
-        .guarantee-text {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            font-weight: 700;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
+        .guarantee-text { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: white; margin-bottom: 0.5rem; }
         .guarantee-subtext { color: rgba(255,255,255,0.9); font-size: 1.1rem; }
 
-        /* Rewards Tiers */
-        .rewards-section {
-            padding: 3rem 0;
-        }
+        .rewards-section { padding: 3rem 0; }
+        .rewards-section h2 { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; }
+        .rewards-subtitle { text-align: center; color: var(--text-gray); margin-bottom: 2rem; font-size: 1rem; }
+        .rewards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+        @media (max-width: 800px) { .rewards-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .rewards-grid { grid-template-columns: 1fr; } }
 
-        .rewards-section h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .rewards-subtitle {
-            text-align: center;
-            color: var(--text-gray);
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .rewards-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-        }
-
-        @media (max-width: 800px) {
-            .rewards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 500px) {
-            .rewards-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .reward-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .reward-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .reward-card.top-3 {
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 88, 12, 0.1) 100%);
-            border-color: rgba(249, 115, 22, 0.3);
-        }
-
-        .reward-rank {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-        }
-
+        .reward-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; }
+        .reward-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.2); }
+        .reward-card.top-3 { background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 88, 12, 0.1) 100%); border-color: rgba(249, 115, 22, 0.3); }
+        .reward-rank { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
         .reward-card.top-3 .reward-rank { color: var(--accent-orange); }
         .reward-card.top-10 .reward-rank { color: var(--accent-cyan); }
         .reward-card.top-50 .reward-rank { color: var(--accent-purple); }
         .reward-card.everyone .reward-rank { color: var(--accent-green); }
-
-        .reward-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-white);
-            margin-bottom: 0.5rem;
-        }
-
-        .reward-desc {
-            font-size: 0.85rem;
-            color: var(--text-gray);
-            line-height: 1.5;
-        }
-
-        .who-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
-
-        @media (max-width: 650px) { .who-grid { grid-template-columns: 1fr; } }
-
-        .who-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 1.75rem;
-        }
-
-        .who-card h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .who-card h3 span {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-        }
-
-        .who-card.for-you h3 { color: var(--accent-green); }
-        .who-card.for-you h3 span { background: rgba(34, 197, 94, 0.2); }
-        .who-card.not-for-you h3 { color: var(--text-gray); }
-        .who-card.not-for-you h3 span { background: rgba(255, 255, 255, 0.1); }
-        .who-card p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.7; }
+        .reward-title { font-size: 1rem; font-weight: 600; color: var(--text-white); margin-bottom: 0.5rem; }
+        .reward-desc { font-size: 0.85rem; color: var(--text-gray); line-height: 1.5; }
 
         .about-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 2.5rem;
-            align-items: start;
-        }
-
+        .about-grid { display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start; }
         @media (max-width: 650px) { .about-grid { grid-template-columns: 1fr; text-align: center; } }
-
-        .about-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-purple) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            margin: 0 auto;
-        }
-
+        .about-photo { width: 200px; height: 200px; border-radius: 20px; overflow: hidden; margin: 0 auto; }
+        .about-photo img { width: 100%; height: 100%; object-fit: cover; }
         .about-content h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
         .about-title { color: var(--accent-orange); font-size: 1rem; font-weight: 500; margin-bottom: 1.25rem; }
         .about-content p { color: var(--text-gray); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem; }
         .about-content p strong { color: var(--text-light); }
-
         .credential-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
         @media (max-width: 650px) { .credential-tags { justify-content: center; } }
-
-        .credential-tag {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            padding: 0.4rem 0.9rem;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-light);
-        }
-
-        .linkedin-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 1.25rem;
-            color: var(--accent-cyan);
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
+        .credential-tag { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 100px; padding: 0.4rem 0.9rem; font-size: 0.8rem; font-weight: 500; color: var(--text-light); }
+        .linkedin-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.25rem; color: var(--accent-cyan); font-size: 0.95rem; font-weight: 500; text-decoration: none; }
         .linkedin-link:hover { color: var(--text-white); text-decoration: underline; }
 
         .story-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
-
-        .story-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
+        .story-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2.5rem; max-width: 750px; margin: 0 auto; }
         .story-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; }
         .story-card p { color: var(--text-gray); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
-
-        .story-quote {
-            border-left: 3px solid var(--accent-orange);
-            padding-left: 1.25rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: var(--text-light);
-        }
+        .story-quote { border-left: 3px solid var(--accent-orange); padding-left: 1.25rem; margin: 1.5rem 0; font-style: italic; color: var(--text-light); }
 
         .process-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
         .process-section h2 { font-size: 1.75rem; font-weight: 700; text-align: center; margin-bottom: 2.5rem; }
-
         .process-steps { display: flex; flex-direction: column; gap: 1.5rem; max-width: 650px; margin: 0 auto; }
-
         .process-step { display: flex; gap: 1.25rem; align-items: flex-start; }
-
-        .step-number {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: white;
-            flex-shrink: 0;
-        }
-
+        .step-number { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 700; color: white; flex-shrink: 0; }
         .step-content h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.35rem; }
         .step-content p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.6; }
 
         .challenge-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
         .challenge-section .section-title { text-align: center; }
-
         .challenge-intro { max-width: 700px; margin: 0 auto 2.5rem; text-align: center; }
         .challenge-intro p { color: var(--text-gray); font-size: 1.05rem; line-height: 1.7; margin-bottom: 0.75rem; }
         .challenge-intro p strong { color: var(--text-white); }
-
         .challenge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
         @media (max-width: 700px) { .challenge-grid { grid-template-columns: 1fr; } }
-
-        .challenge-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
+        .challenge-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; overflow: hidden; }
         .challenge-card-header { padding: 1.5rem; display: flex; align-items: center; gap: 1rem; }
-
-        .challenge-card.behavioral .challenge-card-header {
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.1) 100%);
-            border-bottom: 1px solid rgba(249, 115, 22, 0.2);
-        }
-
-        .challenge-card.dsa .challenge-card-header {
-            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(34, 197, 94, 0.1) 100%);
-            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
-        }
-
+        .challenge-card.behavioral .challenge-card-header { background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.1) 100%); border-bottom: 1px solid rgba(249, 115, 22, 0.2); }
+        .challenge-card.dsa .challenge-card-header { background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(34, 197, 94, 0.1) 100%); border-bottom: 1px solid rgba(6, 182, 212, 0.2); }
         .challenge-weight { font-size: 1.75rem; font-weight: 800; color: var(--accent-orange); }
         .challenge-card.dsa .challenge-weight { color: var(--accent-cyan); }
         .challenge-card-header h3 { font-size: 1.25rem; font-weight: 700; }
-
         .challenge-card-content { padding: 1.5rem; }
         .challenge-card-content p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
         .challenge-card-content p:last-child { margin-bottom: 0; }
         .challenge-card-content p strong { color: var(--text-light); }
         .challenge-warning { color: var(--accent-orange) !important; font-weight: 500; font-size: 0.9rem !important; }
-
-        .challenge-details {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem 2.5rem;
-            padding: 1.5rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-        }
-
+        .challenge-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem 2.5rem; padding: 1.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; }
         .challenge-detail-item { display: flex; align-items: center; gap: 0.5rem; color: var(--text-gray); font-size: 0.9rem; }
         .challenge-detail-item svg { width: 20px; height: 20px; color: var(--accent-orange); flex-shrink: 0; }
         .challenge-detail-item strong { color: var(--text-light); }
 
         .faq-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
         .faq-section h2 { font-size: 1.75rem; font-weight: 700; text-align: center; margin-bottom: 2.5rem; }
-
         .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; max-width: 900px; margin: 0 auto; }
         @media (max-width: 700px) { .faq-grid { grid-template-columns: 1fr; } }
-
-        .faq-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 1.5rem;
-        }
-
+        .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; }
         .faq-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
         .faq-item p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; }
 
         .cta-section { text-align: center; padding: 3rem 0 5rem; }
+        .countdown-wrapper { text-align: center; margin-bottom: 1.5rem; }
+        .countdown-label { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.75rem; }
+        .countdown { display: flex; justify-content: center; gap: 1rem; }
+        .countdown-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 0.75rem 1rem; width: 70px; text-align: center; }
+        .countdown-number { font-size: 1.75rem; font-weight: 700; color: var(--accent-orange); line-height: 1; }
+        .countdown-unit { font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+        .countdown-expired { color: var(--accent-red); font-weight: 600; font-size: 1.1rem; }
 
         .event-tags { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
-
-        .event-tag {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
+        .event-tag { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 100px; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 500; color: var(--text-light); display: flex; align-items: center; gap: 0.4rem; }
         .event-tag svg { width: 16px; height: 16px; color: var(--accent-orange); }
+        .event-tag.price-tag { background: rgba(249, 115, 22, 0.15); border-color: rgba(249, 115, 22, 0.3); color: var(--accent-orange); font-weight: 600; }
 
-        .event-tag.price-tag {
-            background: rgba(249, 115, 22, 0.15);
-            border-color: rgba(249, 115, 22, 0.3);
-            color: var(--accent-orange);
-            font-weight: 600;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%);
-            color: white;
-            font-size: 1.15rem;
-            font-weight: 600;
-            padding: 1.15rem 2.5rem;
-            border-radius: 14px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 24px rgba(249, 115, 22, 0.4);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 36px rgba(249, 115, 22, 0.5);
-        }
-
+        .cta-button { display: inline-flex; align-items: center; gap: 0.6rem; background: linear-gradient(135deg, var(--accent-orange) 0%, #ea580c 100%); color: white; font-size: 1.15rem; font-weight: 600; padding: 1.15rem 2.5rem; border-radius: 14px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 24px rgba(249, 115, 22, 0.4); }
+        .cta-button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 36px rgba(249, 115, 22, 0.5); }
         .cta-button svg { width: 20px; height: 20px; }
 
         .limited-text { margin-top: 1.25rem; font-size: 0.9rem; color: var(--text-gray); }
         .limited-text strong { color: var(--text-light); }
 
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid var(--glass-border);
-            color: var(--text-gray);
-            font-size: 0.85rem;
-        }
-
+        .footer { text-align: center; padding: 2rem 0; border-top: 1px solid var(--glass-border); color: var(--text-gray); font-size: 0.85rem; }
         .footer a { color: var(--accent-orange); text-decoration: none; }
-
-        /* Countdown Timer */
-        .countdown-wrapper {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .countdown-label {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            margin-bottom: 0.75rem;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .countdown-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 0.75rem 1rem;
-            min-width: 70px;
-            width: 70px;
-            text-align: center;
-        }
-
-        .countdown-number {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--accent-orange);
-            line-height: 1;
-        }
-
-        .countdown-unit {
-            font-size: 0.7rem;
-            color: var(--text-gray);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 0.25rem;
-        }
-
-        .countdown-expired {
-            color: var(--accent-red);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
     </style>
 </head>
 <body>
@@ -862,7 +358,7 @@
     <section class="hero">
         <div class="container">
             <h1 class="headline">Why aren't you getting shortlisted when less skilled people are?</h1>
-            <p class="subhead">Prove you belong in the top 3. <strong>We'll get you the interview.</strong></p>
+            <p class="subhead">Prove you belong in the top 3. <strong>I'll get you the interview.</strong></p>
             <a href="https://rzp.io/rzp/C8JpxIr" class="hero-cta">
                 Register for ₹499
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -963,7 +459,7 @@
                         </svg>
                     </div>
                     <div class="card-title">Human evaluation</div>
-                    <p class="card-desc">Real people review your code. Not algorithms. Not AI.</p>
+                    <p class="card-desc">Real people review your work. Not algorithms. Not AI.</p>
                 </div>
                 <div class="glass-card solution">
                     <div class="card-icon">
@@ -994,13 +490,12 @@
                     </svg>
                 </div>
                 <p class="guarantee-text">Top 3 get guaranteed interviews.</p>
-                <p class="guarantee-subtext">Not "we'll try." Not "maybe." <strong>Guaranteed.</strong> You still have to clear the interview. We're not handing out jobs. But you will get the shot.</p>
+                <p class="guarantee-subtext">Not "we'll try." Not "maybe." <strong>Guaranteed.</strong> You still have to clear the interview. I'm not handing out jobs. But you will get the shot.</p>
                 <p class="guarantee-subtext" style="margin-top: 0.75rem; opacity: 0.9;">No resume. No college name. Just what you show up and prove.</p>
                 <p class="guarantee-subtext" style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.85; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">🔒 If I can't secure interviews for the top 3, I'll refund everyone. No questions asked.</p>
             </div>
         </section>
 
-        <!-- Rewards Tiers -->
         <section class="rewards-section">
             <h2>Everyone walks away with something</h2>
             <p class="rewards-subtitle">Not just the winners. Here's what you get based on your performance:</p>
@@ -1027,7 +522,7 @@
                 </div>
             </div>
             <p style="text-align: center; margin-top: 1.5rem; color: var(--text-gray); font-size: 0.9rem;">
-                <strong style="color: var(--text-light);">Full transparency:</strong> We'll publish the top 3 answers so everyone can compare, learn, and see exactly why they won.
+                <strong style="color: var(--text-light);">Full transparency:</strong> I'll publish the top 3 answers so everyone can compare, learn, and see exactly why they won.
             </p>
         </section>
 
@@ -1039,9 +534,9 @@
                 About Me
             </div>
             <div class="about-grid">
-				<div class="about-photo">
-					<img src="profile.jpg" alt="Hari" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
-				</div>
+                <div class="about-photo">
+                    <img src="profile.jpg" alt="Hari">
+                </div>
                 <div class="about-content">
                     <h2>Hari</h2>
                     <p class="about-title">Ex-Amazon SDE · MS in AI, Northeastern University</p>
@@ -1098,7 +593,7 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Compete in a proctored challenge</h3>
-                        <p>Solve real coding problems. No internet. No ChatGPT. No cheating. Your skills, period.</p>
+                        <p>Solve real problems. No internet. No ChatGPT. No cheating. Your skills, period.</p>
                     </div>
                 </div>
                 <div class="process-step">
@@ -1112,7 +607,7 @@
                     <div class="step-number">5</div>
                     <div class="step-content">
                         <h3>Top 3 get guaranteed interviews</h3>
-                        <p><strong>Guaranteed.</strong> Not "we'll try." Not "maybe if companies are interested." You still have to clear the interview. We're not handing out jobs. But you will get the shot.</p>
+                        <p><strong>Guaranteed.</strong> Not "we'll try." Not "maybe if companies are interested." You still have to clear the interview. I'm not handing out jobs. But you will get the shot.</p>
                     </div>
                 </div>
             </div>
@@ -1125,12 +620,12 @@
                 </svg>
                 The Challenge
             </div>
-            <h2 class="section-title">What we're actually looking for</h2>
+            <h2 class="section-title">What I'm actually looking for</h2>
 
             <div class="challenge-intro">
-                <p>We're not looking for people who can just solve LeetCode problems. <strong>Everyone can do that now.</strong></p>
-                <p>We're looking for the <strong>next generation of leaders</strong>. People who take ownership, solve real problems, and have the attitude that companies actually want to hire.</p>
-                <p>We don't look at your resume. Your college name doesn't matter here. <strong>What you present in the challenge IS your resume.</strong></p>
+                <p>I'm not looking for people who can just solve LeetCode problems. <strong>Everyone can do that now.</strong></p>
+                <p>I'm looking for the <strong>next generation of leaders</strong>. People who take ownership, solve real problems, and have the attitude that companies actually want to hire.</p>
+                <p>I don't look at your resume. Your college name doesn't matter here. <strong>What you present in the challenge IS your resume.</strong></p>
                 <p>That's why this challenge is weighted <strong>70% behavioral, 30% DSA.</strong></p>
             </div>
 
@@ -1144,7 +639,7 @@
                         <p>You'll be given real-world scenarios and asked to demonstrate how you think, lead, and solve problems.</p>
                         <p>You'll also document <strong>real situations from your own life</strong> where you've demonstrated leadership principles. Ownership, bias for action, learning from failure, delivering results.</p>
                         <p style="background: rgba(6, 182, 212, 0.1); border-radius: 8px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.9rem;"><strong style="color: var(--accent-cyan);">Sample question:</strong> "Tell me about a time you had to complete a project with unclear requirements. What did you do?"</p>
-                        <p style="font-size: 0.85rem; color: var(--text-gray);">We're evaluating your thinking and actions, not your English. Write in whatever language you're comfortable with. Clarity of thought matters, grammar doesn't.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-gray);">I'm evaluating your thinking and actions, not your English. Write in whatever language you're comfortable with. Clarity of thought matters, grammar doesn't.</p>
                         <p class="challenge-warning">Your examples will be background checked with references. Don't make things up.</p>
                     </div>
                 </div>
@@ -1158,7 +653,7 @@
                         <p>Auto-graded with test cases. Standard interview-level difficulty.</p>
                         <p style="margin-top: 0.75rem;"><strong style="color: var(--text-light);">What to study:</strong> Don't just memorize LeetCode patterns. Understand <em>why</em> algorithms work. Know your data structures deeply.</p>
                         <p style="background: rgba(6, 182, 212, 0.1); border-radius: 8px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.9rem;"><strong style="color: var(--accent-cyan);">Example question:</strong> "What data structure would you use for Kruskal's algorithm and why? How would you optimize it?"</p>
-                        <p style="font-size: 0.85rem; color: var(--text-gray);">We're testing if you understand trade-offs, not if you've memorized solutions. Know your arrays, trees, graphs, heaps, and hash maps inside out.</p>
+                        <p style="font-size: 0.85rem; color: var(--text-gray);">I'm testing if you understand trade-offs, not if you've memorized solutions. Know your arrays, trees, graphs, heaps, and hash maps inside out.</p>
                     </div>
                 </div>
             </div>
@@ -1335,4 +830,3 @@
     </script>
 </body>
 </html>
-

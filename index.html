@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IndustryReady Challenge | Get Interview Opportunities with Top Companies</title>
-    <meta name="description" content="A fair, proctored challenge for engineering students. Top performers get interview opportunities with Cognizant, Infosys, and Amazon. No college name bias. Just your skills.">
+    <meta name="description" content="A fair, proctored challenge for engineering students. Top performers get interview opportunities with Cognizant and Infosys. No college name bias. Just your skills.">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXX2KDSDVL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -16,14 +16,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://socialitix.org/">
     <meta property="og:title" content="IndustryReady Challenge | Interview Opportunities with Top Companies">
-    <meta property="og:description" content="A fair, proctored challenge for engineering students. Top performers get interview opportunities with Cognizant, Infosys, and Amazon.">
+    <meta property="og:description" content="A fair, proctored challenge for engineering students. Top performers get interview opportunities with Cognizant and Infosys.">
     <meta property="og:image" content="https://socialitix.org/og-image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://socialitix.org/">
     <meta name="twitter:title" content="IndustryReady Challenge | Interview Opportunities with Top Companies">
-    <meta name="twitter:description" content="A fair, proctored challenge for engineering students. Top performers get interview opportunities with Cognizant, Infosys, and Amazon.">
+    <meta name="twitter:description" content="A fair, proctored challenge for engineering students. Top performers get interview opportunities with Cognizant and Infosys.">
     <meta name="twitter:image" content="https://socialitix.org/og-image.png">
 
     <link rel="canonical" href="https://socialitix.org/">
@@ -317,7 +317,47 @@
         .story-card p { color: var(--text-gray); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
         .story-quote { border-left: 3px solid var(--accent-orange); padding-left: 1.25rem; margin: 1.5rem 0; font-style: italic; color: var(--text-light); }
 
-        .cta-section { text-align: center; padding: 3rem 0 4rem; }
+        .blueprint-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
+        .blueprint-section h2 { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 0.75rem; }
+        .blueprint-subtitle { text-align: center; color: var(--text-gray); font-size: 1rem; margin-bottom: 2rem; }
+        .blueprint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 700px; margin: 0 auto; }
+        @media (max-width: 600px) { .blueprint-grid { grid-template-columns: 1fr; } }
+        .blueprint-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; }
+        .blueprint-card.behavioral { border-left: 3px solid var(--accent-orange); }
+        .blueprint-card.dsa { border-left: 3px solid var(--accent-cyan); }
+        .blueprint-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .blueprint-weight { font-size: 1.5rem; font-weight: 800; }
+        .blueprint-card.behavioral .blueprint-weight { color: var(--accent-orange); }
+        .blueprint-card.dsa .blueprint-weight { color: var(--accent-cyan); }
+        .blueprint-title { font-size: 1.1rem; font-weight: 600; }
+        .blueprint-card p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.5rem; }
+        .blueprint-card p strong { color: var(--text-light); }
+
+        .rewards-section { padding: 4rem 0; border-top: 1px solid var(--glass-border); }
+        .rewards-section h2 { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 0.75rem; }
+        .rewards-subtitle { text-align: center; color: var(--text-gray); font-size: 1rem; margin-bottom: 2.5rem; }
+        .rewards-tiers { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto; }
+        .reward-tier { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 14px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+        .reward-tier.top { border-color: rgba(249, 115, 22, 0.4); background: rgba(249, 115, 22, 0.08); }
+        .reward-tier.mid { border-color: rgba(6, 182, 212, 0.4); background: rgba(6, 182, 212, 0.08); }
+        .reward-tier.everyone { border-color: rgba(34, 197, 94, 0.4); background: rgba(34, 197, 94, 0.08); }
+        .tier-badge { font-size: 0.8rem; font-weight: 700; padding: 0.35rem 0.75rem; border-radius: 100px; white-space: nowrap; }
+        .reward-tier.top .tier-badge { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+        .reward-tier.mid .tier-badge { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); }
+        .reward-tier.everyone .tier-badge { background: rgba(34, 197, 94, 0.2); color: var(--accent-green); }
+        .tier-content h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .tier-content p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.5; }
+        @media (max-width: 500px) {
+            .reward-tier { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+            .tier-badge { align-self: flex-start; }
+        }
+        .clean-slate { text-align: center; margin-top: 2rem; padding: 1.25rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .clean-slate p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.5; }
+        .clean-slate strong { color: var(--text-light); }
+
+        .cta-section { text-align: center; padding: 4rem 0 5rem; border-top: 1px solid var(--glass-border); }
+        .cta-headline { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .cta-subline { color: var(--text-gray); font-size: 1rem; margin-bottom: 2rem; }
 
         .cta-button {
             display: inline-flex;
@@ -347,6 +387,43 @@
         .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 1.25rem; }
         .faq-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
         .faq-item p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.5; }
+
+        .scorecard-preview { margin-top: 2.5rem; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .scorecard-preview h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; color: var(--text-white); }
+        .scorecard-item { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--glass-border); }
+        .scorecard-item:last-child { border-bottom: none; }
+        .scorecard-label { font-size: 0.9rem; color: var(--text-light); }
+        .scorecard-bar-container { display: flex; align-items: center; gap: 0.75rem; flex: 1; max-width: 200px; }
+        .scorecard-bar { flex: 1; height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; }
+        .scorecard-bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
+        .scorecard-bar-fill.high { background: var(--accent-green); }
+        .scorecard-bar-fill.medium { background: var(--accent-orange); }
+        .scorecard-bar-fill.low { background: var(--accent-red); }
+        .scorecard-score { font-size: 0.85rem; font-weight: 600; min-width: 35px; text-align: right; }
+        .scorecard-score.high { color: var(--accent-green); }
+        .scorecard-score.medium { color: var(--accent-orange); }
+        .scorecard-score.low { color: var(--accent-red); }
+        .scorecard-note { text-align: center; font-size: 0.8rem; color: var(--text-gray); margin-top: 1.5rem; }
+
+        .report-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; background: rgba(249, 115, 22, 0.1); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: 12px; margin-bottom: 1.5rem; }
+        .report-rank, .report-overall { font-size: 0.9rem; color: var(--text-gray); }
+        .report-rank span, .report-overall span { font-weight: 700; color: var(--accent-orange); font-size: 1.1rem; }
+        .report-section { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); }
+        .report-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .report-section-title { font-size: 0.95rem; font-weight: 700; color: var(--text-white); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--glass-border); }
+        .report-subsection { margin-bottom: 1.25rem; padding-left: 0.5rem; }
+        .report-subsection:last-child { margin-bottom: 0; }
+        .report-detail { font-size: 0.8rem; color: var(--text-gray); line-height: 1.6; margin-top: 0.5rem; padding-left: 0.5rem; border-left: 2px solid var(--glass-border); }
+        .report-detail strong { color: var(--text-light); }
+        .report-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+        @media (max-width: 500px) { .report-summary { grid-template-columns: 1fr; } .report-header { flex-direction: column; gap: 0.5rem; text-align: center; } .scorecard-item { flex-direction: column; align-items: flex-start; gap: 0.5rem; } .scorecard-bar-container { max-width: 100%; width: 100%; } }
+        .report-summary-item { background: var(--glass-bg); border-radius: 10px; padding: 1rem; }
+        .report-summary-item.strength { border-left: 3px solid var(--accent-green); }
+        .report-summary-item.improve { border-left: 3px solid var(--accent-orange); }
+        .report-summary-item strong { display: block; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-light); }
+        .report-summary-item ul { margin: 0; padding-left: 1.25rem; font-size: 0.8rem; color: var(--text-gray); line-height: 1.7; }
+        .report-verdict { background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 10px; padding: 1rem; font-size: 0.85rem; color: var(--text-gray); line-height: 1.6; }
+        .report-verdict strong { color: var(--accent-cyan); }
     </style>
 </head>
 <body>
@@ -363,8 +440,9 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#problem-section">Problem</a></li>
                 <li><a href="#solution-section">Solution</a></li>
+                <li><a href="#blueprint-section">Challenge</a></li>
+                <li><a href="#rewards-section">Rewards</a></li>
                 <li><a href="#about-section">About</a></li>
-                <li><a href="#story-section">Why</a></li>
                 <li><a href="#faq-section">FAQ</a></li>
                 <li><a href="https://forms.gle/VoEuMe1hLZWwRUif9" class="nav-cta">Join Waitlist</a></li>
             </ul>
@@ -391,7 +469,6 @@
             <div class="company-logos">
                 <img src="cts.png" alt="Cognizant" class="company-logo">
                 <img src="infosys.png" alt="Infosys" class="company-logo">
-                <img src="amazon.png" alt="Amazon" class="company-logo">
             </div>
         </div>
         <div class="scroll-indicator">
@@ -458,7 +535,7 @@
                     </svg>
                 </div>
                 <p class="guarantee-text">Top performers get interview opportunities.</p>
-                <p class="guarantee-subtext">We're building a fair, proctored challenge. <strong>No resume screening. No college name bias. No AI filters.</strong> Just your skills against everyone else's. Top performers get direct interview opportunities with companies like Cognizant, Infosys, and Amazon.</p>
+                <p class="guarantee-subtext">We're building a fair, proctored challenge. <strong>No resume screening. No college name bias. No AI filters.</strong> Just your skills against everyone else's. Top performers get direct interview opportunities with companies like Cognizant and Infosys.</p>
             </div>
         </section>
 
@@ -506,8 +583,181 @@
                         </svg>
                     </div>
                     <div class="card-title">Real interviews</div>
-                    <p class="card-desc">Top performers get interviews with companies like Cognizant, Infosys, and Amazon.</p>
+                    <p class="card-desc">Top performers get interviews with companies like Cognizant and Infosys.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="blueprint-section" id="blueprint-section">
+            <h2>The Challenge Blueprint</h2>
+            <p class="blueprint-subtitle">No surprises. Here's exactly what you'll face.</p>
+            <div class="blueprint-grid">
+                <div class="blueprint-card behavioral">
+                    <div class="blueprint-header">
+                        <span class="blueprint-weight">70%</span>
+                        <span class="blueprint-title">Behavioral</span>
+                    </div>
+                    <p><strong>4 questions, 2 hours.</strong></p>
+                    <p>Real interview questions about how you handle problems, work in teams, and make decisions. Written responses, 100 words each.</p>
+                    <p>This is what actually gets you hired or rejected. Most students ignore it.</p>
+                </div>
+                <div class="blueprint-card dsa">
+                    <div class="blueprint-header">
+                        <span class="blueprint-weight">30%</span>
+                        <span class="blueprint-title">DSA</span>
+                    </div>
+                    <p><strong>2 problems, 1 hour.</strong></p>
+                    <p>Practical coding problems with test cases. Focus on logic and edge cases, not memorized algorithms.</p>
+                    <p>You also explain your approach in writing. We want to see how you think, not just if your code runs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rewards-section" id="rewards-section">
+            <h2>Not in the Top 10? You still win.</h2>
+            <p class="rewards-subtitle">Everyone walks away with something. Here's what you get based on your rank.</p>
+            <div class="rewards-tiers">
+                <div class="reward-tier top">
+                    <span class="tier-badge">TOP 10</span>
+                    <div class="tier-content">
+                        <h3>Interview Opportunities</h3>
+                        <p>Direct interview access with companies like Cognizant and Infosys. This is the main prize.</p>
+                    </div>
+                </div>
+                <div class="reward-tier mid">
+                    <span class="tier-badge">TOP 50%</span>
+                    <div class="tier-content">
+                        <h3>Free Entry to Next Batch</h3>
+                        <p>You proved you're close. Come back and try again, on us. No fee for the next challenge.</p>
+                    </div>
+                </div>
+                <div class="reward-tier everyone">
+                    <span class="tier-badge">EVERYONE</span>
+                    <div class="tier-content">
+                        <h3>Detailed Feedback Report</h3>
+                        <p>A breakdown of your performance from someone who's done 100+ interviews. See exactly where you stand and what to fix.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clean-slate">
+                <p><strong>Your score is private.</strong> If you don't make the top 10, no one knows but you. Use the feedback, improve, and come back stronger.</p>
+            </div>
+
+            <div class="scorecard-preview">
+                <h3>Sample Feedback Report (what you'll receive)</h3>
+
+                <div class="report-header">
+                    <div class="report-rank">Your Rank: <span>47</span> / 156 participants</div>
+                    <div class="report-overall">Overall Score: <span>74</span>/100</div>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">Behavioral Assessment (70%)</div>
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Ownership & Initiative</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill high" style="width: 85%;"></div></div>
+                                <span class="scorecard-score high">85</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>What you did well:</strong> Your college fest example showed clear ownership. You identified the vendor problem early, took initiative without being asked, and followed through despite pushback from seniors. The specific details made it credible.
+                        </div>
+                        <div class="report-detail">
+                            <strong>What was missing:</strong> You didn't mention what you learned or how you'd handle it differently. Interviewers want to see self-reflection, not just "I did X and it worked."
+                        </div>
+                    </div>
+
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Problem Solving Approach</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill high" style="width: 78%;"></div></div>
+                                <span class="scorecard-score high">78</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>What you did well:</strong> Clear STAR structure. You broke down the API integration problem into smaller chunks and prioritized based on user impact. Good instinct.
+                        </div>
+                        <div class="report-detail">
+                            <strong>What was missing:</strong> You jumped to the solution too fast. Spend more time explaining WHY you chose that approach over alternatives.
+                        </div>
+                    </div>
+
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Communication Clarity</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill medium" style="width: 68%;"></div></div>
+                                <span class="scorecard-score medium">68</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>What you did well:</strong> Concise answers. No unnecessary fluff. You respected the reader's time.
+                        </div>
+                        <div class="report-detail">
+                            <strong>What was missing:</strong> Some answers felt rushed. Be more specific about "the system" or "the team." The evaluator shouldn't have to guess.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">DSA Assessment (30%)</div>
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Problem 1: Array Manipulation</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill high" style="width: 100%;"></div></div>
+                                <span class="scorecard-score high">10/10</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">All test cases passed. O(n) solution. Clean code.</div>
+                    </div>
+
+                    <div class="report-subsection">
+                        <div class="scorecard-item">
+                            <span class="scorecard-label">Problem 2: Graph Traversal</span>
+                            <div class="scorecard-bar-container">
+                                <div class="scorecard-bar"><div class="scorecard-bar-fill medium" style="width: 60%;"></div></div>
+                                <span class="scorecard-score medium">6/10</span>
+                            </div>
+                        </div>
+                        <div class="report-detail">
+                            <strong>Issue:</strong> You used BFS but the problem required shortest path with weighted edges. Dijkstra's algorithm was the right choice here. 4 test cases failed.
+                        </div>
+                        <div class="report-detail">
+                            <strong>Study:</strong> Review when to use BFS vs Dijkstra vs Bellman-Ford. This is a common interview trap.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-section">
+                    <div class="report-section-title">Overall Assessment</div>
+                    <div class="report-summary">
+                        <div class="report-summary-item strength">
+                            <strong>Your Strengths</strong>
+                            <ul>
+                                <li>Real, specific examples with outcomes</li>
+                                <li>Good instinct for breaking down problems</li>
+                                <li>Clean, readable code structure</li>
+                            </ul>
+                        </div>
+                        <div class="report-summary-item improve">
+                            <strong>Focus Areas</strong>
+                            <ul>
+                                <li>Add self-reflection to behavioral answers</li>
+                                <li>Graph algorithms: weighted vs unweighted</li>
+                                <li>Explain WHY, not just WHAT</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="report-verdict">
+                        <strong>Interview Readiness:</strong> You're close. Your behavioral answers would pass most first rounds. DSA needs 2-3 weeks of focused practice on graphs. Target: 30 medium-level problems.
+                    </div>
+                </div>
+
+                <p class="scorecard-note">Every participant receives this level of detailed feedback. This is what makes the challenge worth it even if you don't win.</p>
             </div>
         </section>
 
@@ -559,35 +809,53 @@
         </section>
 
         <section class="faq-section" id="faq-section">
-            <h2>Questions</h2>
+            <h2>Real Questions, Honest Answers</h2>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>Is this free?</h3>
-                    <p>Joining the waitlist is free. We'll share pricing and details when we launch.</p>
+                    <h3>How much does it cost?</h3>
+                    <p>₹500. Covers the venue, proctoring, and the time to manually review your work and write your feedback report. Joining the waitlist is free.</p>
                 </div>
                 <div class="faq-item">
                     <h3>When and where is the challenge?</h3>
-                    <p>Chennai, date TBD. We'll notify everyone on the waitlist when we finalize.</p>
+                    <p>Chennai, date TBD. We'll notify everyone on the waitlist when we finalize details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is this a placement agency?</h3>
+                    <p>No. We don't take a cut from your salary. We're an assessment that validates your skills for companies that don't have time to interview everyone.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I'm not from a CS background?</h3>
+                    <p>We don't care. If you can code, you can compete. The compiler doesn't check your degree.</p>
                 </div>
                 <div class="faq-item">
                     <h3>How do top performers get interviews?</h3>
-                    <p>We're working with HR contacts at companies like Cognizant, Infosys, and Amazon to provide interview opportunities for top performers. You still have to clear the interview. We're giving you access, not a job offer.</p>
+                    <p>We're working with HR contacts at Cognizant and Infosys. Top 10 get direct interview access. You still have to clear the interview. We're giving you access, not a job offer.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I fail?</h3>
+                    <p>You still get a detailed feedback report. Top 50% get free entry to the next batch. Your score stays private. No public leaderboard, no shame.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Why should I trust this?</h3>
-                    <p>Fair question. This is new. We're building it in public. Join the waitlist to follow along. You can decide whether to participate once you see more details.</p>
+                    <p>Fair question. Check my LinkedIn. 16 years in tech, 8 at Amazon, 100+ interviews. This is the founding batch. No testimonials yet because no one has done this before.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is this only for freshers?</h3>
+                    <p>This batch is focused on final-year students and recent graduates looking for their first job. If that's you, you're in the right place.</p>
                 </div>
             </div>
         </section>
 
         <section class="cta-section">
+            <h2 class="cta-headline">Stop guessing why you're being rejected.</h2>
+            <p class="cta-subline">Join the first purely merit-based engineering challenge in Chennai.</p>
             <a href="https://forms.gle/VoEuMe1hLZWwRUif9" class="cta-button">
-                Join the Waitlist
+                Get My Fair Shot
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
             </a>
-            <p class="limited-text">Free to join. No commitment. We'll notify you when we launch.</p>
+            <p class="limited-text">Founding batch limited to 100 seats.</p>
         </section>
 
         <footer class="footer">

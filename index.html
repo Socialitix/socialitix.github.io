@@ -36,7 +36,7 @@
 
         /* Top Banner - 44px */
         .top-banner {
-            height: 44px;
+            height: 24px;
             width: 100%;
             background: var(--primary);
             display: flex;
@@ -317,6 +317,27 @@
             color: var(--text-primary);
         }
 
+        .error-message {
+            display: none;
+            color: #DC2626;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .form-group.error input,
+        .form-group.error select {
+            border-color: #DC2626;
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
         .terms-text {
             font-size: 11px;
             color: var(--text-secondary);
@@ -354,20 +375,498 @@
             transform: translateY(0);
         }
 
-        .verified-badge {
+        /* Timeline Section */
+        .timeline-section {
+            background: var(--primary);
+            padding: 60px 80px;
+            color: #ffffff;
+        }
+
+        .timeline-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .timeline-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .timeline-subtitle {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 48px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            flex: 1;
+        }
+
+        .timeline-dot {
+            width: 48px;
+            height: 48px;
+            background: #ffffff;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            margin-top: 16px;
-            font-size: 12px;
-            color: var(--success);
-            font-weight: 500;
+            margin-bottom: 16px;
+            z-index: 1;
         }
 
-        .verified-badge svg {
-            width: 16px;
-            height: 16px;
+        .timeline-dot svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .timeline-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 140px;
+            line-height: 1.5;
+        }
+
+        .timeline-item-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Traits Section */
+        .traits-section {
+            background: #ffffff;
+            padding: 60px 80px;
+        }
+
+        .traits-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .traits-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .traits-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .trait-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .trait-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .trait-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .trait-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #ffffff;
+        }
+
+        .trait-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .trait-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Resources Section */
+        .resources-section {
+            background: var(--bg-light);
+            padding: 60px 80px;
+        }
+
+        .resources-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .resources-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .resources-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            text-align: left;
+        }
+
+        .faq-question span {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-secondary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 24px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* Leader Section */
+        .leader-section {
+            background: var(--bg-light);
+            padding: 60px 80px;
+        }
+
+        .leader-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .leader-image {
+            width: 200px;
+            height: 200px;
+            background: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .leader-image svg {
+            width: 80px;
+            height: 80px;
+            color: #ffffff;
+        }
+
+        .leader-info {
+            flex: 1;
+        }
+
+        .leader-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .leader-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .leader-title {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .leader-bio {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .leader-linkedin {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #0A66C2;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .leader-linkedin:hover {
+            opacity: 0.9;
+        }
+
+        .leader-linkedin svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* General FAQ Section */
+        .general-faq-section {
+            background: #ffffff;
+            padding: 60px 80px;
+        }
+
+        .general-faq-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .general-faq-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .general-faq-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #000000;
+            padding: 48px 80px;
+            color: #ffffff;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .footer-cta:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Assessment Section */
+        .assessment-section {
+            background: #ffffff;
+            padding: 60px 80px;
+            color: #000000;
+        }
+
+        .assessment-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .assessment-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #000000;
+        }
+
+        .assessment-subtitle {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 40px;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .assessment-card {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 32px;
+        }
+
+        .assessment-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .assessment-card-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .assessment-icon {
+            width: 28px;
+            height: 28px;
+            color: #000000;
+        }
+
+        .assessment-card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .assessment-card-percent {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .assessment-card-desc {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .assessment-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .assessment-details li {
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.7);
+            padding: 6px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .assessment-details li:last-child {
+            padding-bottom: 0;
         }
 
         /* Responsive Styles */
@@ -504,14 +1003,197 @@
             .top-banner p {
                 font-size: 12px;
             }
+
+            /* Timeline section mobile */
+            .timeline-section {
+                padding: 40px 24px;
+            }
+
+            .timeline-title {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .timeline-subtitle {
+                font-size: 14px;
+                text-align: center;
+                margin-bottom: 32px;
+            }
+
+            .timeline {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 24px;
+                right: auto;
+                width: 2px;
+                height: auto;
+            }
+
+            .timeline-item {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+                gap: 16px;
+            }
+
+            .timeline-dot {
+                width: 48px;
+                height: 48px;
+                flex-shrink: 0;
+                margin-bottom: 0;
+            }
+
+            .timeline-desc {
+                max-width: none;
+            }
+
+            .timeline-item-content {
+                align-items: flex-start;
+            }
+
+            /* Assessment section mobile */
+            .assessment-section {
+                padding: 40px 24px;
+            }
+
+            .assessment-title {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .assessment-subtitle {
+                font-size: 14px;
+                text-align: center;
+                margin-bottom: 32px;
+            }
+
+            .assessment-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .assessment-card {
+                padding: 24px;
+            }
+
+            .assessment-icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            .assessment-card-title {
+                font-size: 18px;
+            }
+
+            .assessment-card-percent {
+                font-size: 28px;
+            }
+
+            /* Traits section mobile */
+            .traits-section {
+                padding: 40px 24px;
+            }
+
+            .traits-title {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .traits-subtitle {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .traits-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .trait-card {
+                padding: 20px;
+            }
+
+            /* Resources section mobile */
+            .resources-section {
+                padding: 40px 24px;
+            }
+
+            .resources-title {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .resources-subtitle {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            /* Leader section mobile */
+            .leader-section {
+                padding: 40px 24px;
+            }
+
+            .leader-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 24px;
+            }
+
+            .leader-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .leader-image svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            .leader-name {
+                font-size: 24px;
+            }
+
+            /* General FAQ section mobile */
+            .general-faq-section {
+                padding: 40px 24px;
+            }
+
+            .general-faq-title {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .general-faq-subtitle {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            /* Footer mobile */
+            .footer {
+                padding: 32px 24px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 24px;
+            }
+
+            .footer-left {
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Top Banner - 44px -->
     <div class="top-banner">
-        <p>Know someone who deserves a fair shot?</p>
-        <a href="https://wa.me/?text=Hey%2C%20check%20this%20out%20-%20top%20performers%20get%20real%20interviews%20with%20Cognizant%20%26%20Infosys.%20No%20college%20bias.%20Free%20to%20join.%20https%3A%2F%2Fgetindustryready.com" target="_blank">Invite via WhatsApp →</a>
+        <a href="https://wa.me/?text=Hey%2C%20check%20this%20out%20-%20top%20performers%20get%20real%20interviews%20with%20Cognizant%20%26%20Infosys.%20No%20college%20bias.%20Free%20to%20join.%20https%3A%2F%2Fgetindustryready.com" target="_blank">Invite your friends</a>
     </div>
 
     <!-- Header - 100px -->
@@ -530,8 +1212,6 @@
             <span class="company-logos-label">Interview Partners</span>
             <span class="company-logo-item">Cognizant</span>
             <span class="company-logo-item">Infosys</span>
-            <span class="company-logo-item">TCS</span>
-            <span class="company-logo-item">Wipro</span>
         </div>
     </header>
 
@@ -539,18 +1219,18 @@
     <section class="hero">
         <div class="hero-bg-desktop"></div>
         <div class="hero-gradient-desktop"></div>
-        
+
         <!-- Mobile Image Section -->
         <div class="hero-mobile-image">
             <div class="hero-mobile-gradient"></div>
         </div>
-        
+
         <div class="hero-content">
             <!-- Text Section -->
             <div class="text-section">
                 <h1 class="headline">Get the interview <em>you deserve.</em></h1>
                 <p class="subhead">No resume filters. No college bias. No cheaters. No referrals needed. Just your code.</p>
-                
+
                 <div class="bullet-grid">
                     <div class="bullet-item">
                         <span class="bullet-check">
@@ -588,23 +1268,30 @@
             </div>
 
             <!-- Form Section -->
-            <div class="form-section">
+            <div class="form-section" id="signup-form">
                 <div class="form-card">
                     <div class="form-header">
                         <h3 class="form-title">Get your interview slot</h3>
                         <p class="form-subtitle">February 2025 · Chennai · <strong>Free to join</strong></p>
                     </div>
-                    
-                    <form action="#" method="POST" name="signup" data-netlify="true">
+
+                    <form action="/thank-you.html" method="POST" name="signup" data-netlify="true" netlify-honeypot="bot-field" id="signup-form-element">
+                        <input type="hidden" name="form-name" value="signup">
+                        <p class="hidden" style="display:none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
                         <div class="form-grid">
                             <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                                <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2">
+                                <span class="error-message"></span>
                             </div>
                             <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="WhatsApp number" required>
+                                <input type="tel" id="phone" name="phone" placeholder="WhatsApp number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                                <span class="error-message"></span>
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" name="email" placeholder="Email address" required>
+                                <span class="error-message"></span>
                             </div>
                             <div class="form-group">
                                 <select id="year" name="year" required>
@@ -613,26 +1300,600 @@
                                     <option value="3rd">3rd Year</option>
                                     <option value="final">Final Year</option>
                                 </select>
+                                <span class="error-message"></span>
                             </div>
                             <div class="form-group full-width">
-                                <input type="text" id="college" name="college" placeholder="College name" required>
+                                <input type="text" id="college" name="college" placeholder="College name" required minlength="3">
+                                <span class="error-message"></span>
                             </div>
                         </div>
-                        
+
                         <p class="terms-text">By clicking the button below, you agree to receive communications via Email/Call/WhatsApp/SMS from GetIndustryReady about this programme and other relevant programs. You also agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
-                        
+
                         <button type="submit" class="submit-btn">Enroll before Jan 20th</button>
-                        
-                        <div class="verified-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Interview Guaranteed for Top 10</span>
-                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Assessment Section -->
+    <section class="assessment-section">
+        <div class="assessment-content">
+            <h2 class="assessment-title">The Assessment</h2>
+            <p class="assessment-subtitle">A 3-hour proctored test designed to evaluate what actually matters in the industry.</p>
+
+            <div class="assessment-grid">
+                <div class="assessment-card">
+                    <div class="assessment-card-header">
+                        <div class="assessment-card-title-row">
+                            <svg class="assessment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/>
+                            </svg>
+                            <h3 class="assessment-card-title">Behavioural</h3>
+                        </div>
+                        <span class="assessment-card-percent">50%</span>
+                    </div>
+                    <p class="assessment-card-desc">Written responses to situational questions based on Amazon Leadership Principles. We evaluate ownership, problem-solving, resilience, and communication.</p>
+                    <ul class="assessment-details">
+                        <li>4 questions, ~100 words each</li>
+                        <li>30 mins per question, 2 hours total</li>
+                        <li>No video, no MCQs, no group discussion</li>
+                        <li>Document real scenarios you've experienced</li>
+                    </ul>
+                </div>
+                <div class="assessment-card">
+                    <div class="assessment-card-header">
+                        <div class="assessment-card-title-row">
+                            <svg class="assessment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <h3 class="assessment-card-title">DSA</h3>
+                        </div>
+                        <span class="assessment-card-percent">50%</span>
+                    </div>
+                    <p class="assessment-card-desc">Timed coding problems testing data structures and algorithms. We're testing if you understand trade-offs, not if you've memorized solutions.</p>
+                    <ul class="assessment-details">
+                        <li>2 problems, 30 mins each, 1 hour total</li>
+                        <li>Test cases + written explanation of approach</li>
+                        <li>Difficulty: 1 medium, 1 medium-hard</li>
+                        <li>Arrays, trees, graphs, heaps, hash maps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-content">
+            <h2 class="timeline-title">The Process</h2>
+            <p class="timeline-subtitle">From enrollment to interview - here's how it works.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-item-content">
+                        <span class="timeline-date">Jan 20</span>
+                        <span class="timeline-label">Enrollment Closes</span>
+                        <p class="timeline-desc">Register with your details. Limited seats available.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z" clip-rule="evenodd"/>
+                            <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-item-content">
+                        <span class="timeline-date">Jan 25</span>
+                        <span class="timeline-label">Resume Submission</span>
+                        <p class="timeline-desc">Submit your resume for verification.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-item-content">
+                        <span class="timeline-date">Feb 1</span>
+                        <span class="timeline-label">Background Check</span>
+                        <p class="timeline-desc">We verify your details and experience.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z"/>
+                            <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-item-content">
+                        <span class="timeline-date">Feb 15</span>
+                        <span class="timeline-label">Assessment Day</span>
+                        <p class="timeline-desc">3-hour in-person proctored test in Chennai.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd"/>
+                            <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z"/>
+                        </svg>
+                    </div>
+                    <div class="timeline-item-content">
+                        <span class="timeline-date">Feb 20-28</span>
+                        <span class="timeline-label">Interviews</span>
+                        <p class="timeline-desc">Top performers interview with Cognizant & Infosys.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traits Section -->
+    <section class="traits-section">
+        <div class="traits-content">
+            <h2 class="traits-title">This is for you if you have these traits</h2>
+            <p class="traits-subtitle">We're looking for the next generation of leaders, not just coders.</p>
+
+            <div class="traits-grid">
+                <div class="trait-card">
+                    <div class="trait-card-header">
+                        <div class="trait-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="trait-name">Innovative</h3>
+                    </div>
+                    <p class="trait-desc">Thinking creatively and coming up with original solutions to complex problems.</p>
+                </div>
+                <div class="trait-card">
+                    <div class="trait-card-header">
+                        <div class="trait-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd" d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="trait-name">Data-driven</h3>
+                    </div>
+                    <p class="trait-desc">Using data and analytics to make decisions and improve software performance.</p>
+                </div>
+                <div class="trait-card">
+                    <div class="trait-card-header">
+                        <div class="trait-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52a1.5 1.5 0 011.227 1.771c-.482 2.482-.828 5.018-1.022 7.585a6.037 6.037 0 00-2.857-.66 6 6 0 00-5.977 5.515 47.824 47.824 0 00-1.023-7.514 1.5 1.5 0 011.227-1.771A49.144 49.144 0 0112 7.5c2.43 0 4.817-.178 7.152-.52a1.5 1.5 0 011.227 1.771A48.94 48.94 0 0019.357 16.5H4.643A48.94 48.94 0 003.62 8.75a1.5 1.5 0 011.227-1.771A49.144 49.144 0 0112 7.5c-2.43 0-4.817.178-7.152.52a1.5 1.5 0 01-1.227-1.771 49.144 49.144 0 017.152-.52z" clip-rule="evenodd"/>
+                                <path d="M12 18a3 3 0 100-6 3 3 0 000 6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="trait-name">Curious</h3>
+                    </div>
+                    <p class="trait-desc">Continuously learning skills and staying up-to-date with industry trends and technologies.</p>
+                </div>
+                <div class="trait-card">
+                    <div class="trait-card-header">
+                        <div class="trait-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="trait-name">Results-driven</h3>
+                    </div>
+                    <p class="trait-desc">Focusing on delivering high-quality results that meet or exceed expectations.</p>
+                </div>
+                <div class="trait-card">
+                    <div class="trait-card-header">
+                        <div class="trait-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="trait-name">Communicative</h3>
+                    </div>
+                    <p class="trait-desc">Communicating effectively with team members, stakeholders, and customers.</p>
+                </div>
+                <div class="trait-card">
+                    <div class="trait-card-header">
+                        <div class="trait-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="trait-name">Accountable</h3>
+                    </div>
+                    <p class="trait-desc">Taking ownership and responsibility for your work and the success of your team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="resources-content">
+            <h2 class="resources-title">Prepare for the Assessment</h2>
+            <p class="resources-subtitle">Everything you need to know to ace both sections of the test.</p>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What are behavioral questions and how do I score well on them?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    Behavioral questions ask you to share real examples from your past experiences. These questions help us understand how you approach challenges, make decisions, and work with others.<br><br>
+                    We evaluate your responses based on the six core traits we're looking for: <strong>Innovation</strong>, <strong>Data-driven thinking</strong>, <strong>Curiosity</strong>, <strong>Results orientation</strong>, <strong>Communication</strong>, and <strong>Accountability</strong>.<br><br>
+                    We avoid brain teasers like "How many windows are in Manhattan?" because they don't reliably predict success. Instead, we want to hear real stories that demonstrate these traits.<br><br>
+                    <strong>Here are examples of questions you might be asked:</strong><br>
+                    • Tell me about a time you faced a problem with multiple possible solutions. How did you decide what to do, and what was the outcome?<br>
+                    • Describe a time when you took a risk, made a mistake, or failed. What happened, and what did you learn from it?<br>
+                    • Share an example of when you took the lead on a project.<br>
+                    • What did you do to motivate a group or encourage collaboration on a team project?<br>
+                    • How have you used data to develop a strategy or make a decision?
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How should I structure my answers using the STAR method?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    When you're asked to describe something you've done, we're not looking for a quick answer—we want to hear a complete story. A strong response gives us insight into how you think, act, and problem-solve.<br><br>
+                    Your answer should include:<br>
+                    • <strong>Context</strong> – What was going on, and what was your role?<br>
+                    • <strong>Task</strong> – What were you trying to accomplish?<br>
+                    • <strong>Actions</strong> – What did you specifically do to move things forward?<br>
+                    • <strong>Outcome</strong> – How did it turn out? What did you learn?<br><br>
+                    We don't expect perfect answers or rehearsed scripts. The STAR method is simply a tool to help you organize your thoughts and tell a story that brings your strengths to life.<br><br>
+                    <strong>S = SITUATION</strong><br>
+                    Start by setting the scene. What was going on? Where were you working (or studying or volunteering), and what were you trying to tackle? Give just enough background so we understand the big picture.<br><br>
+                    <strong>T = TASK</strong><br>
+                    What was your goal? What were you responsible for? This helps us understand your role and what you were trying to achieve.<br><br>
+                    <strong>A = ACTION</strong><br>
+                    Walk us through what you did. What steps did you take? How did you approach the challenge? Focus on your individual contributions—use "I" instead of "we."<br><br>
+                    <strong>R = RESULT</strong><br>
+                    How did things turn out? Share what you accomplished and what you learned. If you have numbers or specific outcomes, even better.<br><br>
+                    Remember, not every story has to be a success. We know that failure is part of growth. What matters is what you learned and how you improved.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What makes a great behavioral answer stand out?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <strong>Think in stories</strong><br>
+                    Each answer should have a beginning, middle, and end. What was the situation? What did you do? What happened next?<br><br>
+                    <strong>Be specific</strong><br>
+                    Use real examples from your past—not generalizations. Give a detailed account of one situation for each question. Focus on what you did, and back it up with data or results if possible.<br><br>
+                    <strong>Balance detail with clarity</strong><br>
+                    Try to be clear and concise, but include enough detail to tell a complete story. ~100 words per answer is the sweet spot.<br><br>
+                    <strong>Show range</strong><br>
+                    Have a few examples ready that highlight different strengths, including times you've taken risks, succeeded, failed, and grown.<br><br>
+                    <strong>Demonstrate the traits we're looking for</strong><br>
+                    Your answers should showcase Innovation, Data-driven thinking, Curiosity, Results orientation, Communication, and Accountability. The best answers naturally weave in multiple traits.<br><br>
+                    <strong>Keep it honest</strong><br>
+                    We're not looking for perfection. We value authenticity, self-awareness, and a willingness to learn. Don't make things up—we do background checks.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What DSA topics should I prepare and where can I learn them?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <strong>Data Structures to master:</strong><br>
+                    • Arrays and Strings<br>
+                    • Linked Lists (singly, doubly, circular)<br>
+                    • Stacks and Queues<br>
+                    • Hash Tables / Hash Maps<br>
+                    • Trees (Binary Trees, BST, AVL)<br>
+                    • Heaps (Min-Heap, Max-Heap)<br>
+                    • Graphs (adjacency list, adjacency matrix)<br>
+                    • Tries<br><br>
+                    <strong>Algorithms to know:</strong><br>
+                    • Sorting (Quick Sort, Merge Sort, Heap Sort)<br>
+                    • Searching (Binary Search, DFS, BFS)<br>
+                    • Dynamic Programming<br>
+                    • Greedy Algorithms<br>
+                    • Recursion and Backtracking<br>
+                    • Two Pointers and Sliding Window<br>
+                    • Graph algorithms (Dijkstra's, Kruskal's, Prim's)<br><br>
+                    <strong>Recommended Books:</strong><br>
+                    • <em>"Cracking the Coding Interview"</em> by Gayle Laakmann McDowell — The gold standard for interview prep<br>
+                    • <em>"Introduction to Algorithms"</em> (CLRS) — Comprehensive but dense; great for deep understanding<br>
+                    • <em>"Data Structures and Algorithms Made Easy"</em> by Narasimha Karumanchi — Popular in India, beginner-friendly<br>
+                    • <em>"Elements of Programming Interviews"</em> — Advanced problems with detailed solutions<br><br>
+                    <strong>Online Resources:</strong><br>
+                    • LeetCode (practice problems by topic and difficulty)<br>
+                    • GeeksforGeeks (explanations and code examples)<br>
+                    • NeetCode (curated problem lists with video explanations)<br>
+                    • Abdul Bari on YouTube (algorithm visualizations)
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Why is understanding time and space complexity important?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    We don't just want code that works—we want code that's efficient. Understanding complexity is essential because:<br><br>
+                    <strong>Time Complexity (Big O)</strong><br>
+                    This tells us how your algorithm's runtime grows as input size increases. Know the difference between O(1), O(log n), O(n), O(n log n), O(n²), and O(2^n). A solution that works for 100 elements but crashes on 100,000 won't cut it.<br><br>
+                    <strong>Space Complexity</strong><br>
+                    This measures how much additional memory your algorithm needs. Sometimes you can trade space for time (or vice versa). Understanding this trade-off is crucial.<br><br>
+                    <strong>What we expect:</strong><br>
+                    • Analyze the complexity of your solution before coding<br>
+                    • Explain why you chose a particular approach<br>
+                    • Discuss trade-offs between different solutions<br>
+                    • Optimize when possible—brute force is just the starting point<br><br>
+                    <strong>Pro tip:</strong> In your written explanation, always mention the time and space complexity of your solution. This shows you understand the fundamentals, not just the syntax.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leader Section -->
+    <section class="leader-section">
+        <div class="leader-content">
+            <div class="leader-image">
+				<img src="profile.jpg" style ="width:100%; height:100%; border-radius:14px"/>
+            </div>
+            <div class="leader-info">
+                <span class="leader-label">Program Leader</span>
+                <h3 class="leader-name">Hari</h3>
+                <p class="leader-title">Ex-Amazon SDE • MS in AI, Northeastern University</p>
+                <p class="leader-bio">8+ years at Amazon as a Software Development Engineer, consistently rated as a top performer for 7 consecutive years. Conducted 100+ technical interviews using Amazon's Leadership Principles. Now pursuing a Master's in AI and helping tier-2/tier-3 students get the opportunities they deserve.</p>
+                <a href="https://linkedin.com/in/noblenod" target="_blank" class="leader-linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- General FAQ Section -->
+    <section class="general-faq-section">
+        <div class="general-faq-content">
+            <h2 class="general-faq-title">Frequently Asked Questions</h2>
+            <p class="general-faq-subtitle">Got questions? We've got answers.</p>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Is this a placement guarantee program?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    No. We guarantee interviews for top performers, not placements. The interview is your opportunity - you have to earn the job yourself. We get you in the door; you prove you belong.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Why is this free?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    This is the founding batch. We're building something new and need to prove it works. Your success is our proof of concept. Future batches may have a fee.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Who is this NOT for?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    Students from IITs, BITS, NITs, or other tier-1 colleges. You already have access to the best companies. This is for students who are skilled but don't get the same opportunities because of their college name.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Where is the assessment held?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    Chennai. The exact venue will be shared with registered participants. It's in-person and proctored to ensure fairness - no cheating, no AI assistance, same rules for everyone.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Can I use a laptop or do I need to bring my own?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    Yes, you need to bring your own laptop. Make sure it's fully charged and has a working keyboard. We'll provide the internet connection and testing environment.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What programming languages can I use for the DSA section?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    You can use C, C++, Java, or Python. Choose the language you're most comfortable with. The problems will be language-agnostic, and we evaluate your logic and problem-solving approach, not your syntax.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What happens after the assessment?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    We'll evaluate all submissions and share results within a week. Top performers will be connected directly with HR teams at Cognizant and Infosys for interviews. Everyone else will receive detailed feedback on their performance - what you did well, where you need to improve, and specific recommendations.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>How is the background check done?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    We verify the information in your resume and the experiences you mention in your behavioral answers. This includes checking your college enrollment, any projects or internships you mention, and leadership roles you claim. If we find discrepancies, you'll be disqualified. Be honest - it's not worth the risk.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>What if I'm from a college outside Chennai?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    You're welcome to participate as long as you can be physically present in Chennai on the assessment day. We don't cover travel or accommodation costs, so factor that into your decision. For the founding batch, we're focusing on students who can easily reach Chennai.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    <span>Can I reapply if I don't perform well?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    Yes. If we run future batches, you can apply again. Use the feedback from this assessment to improve. Many successful candidates didn't make it on their first try - what matters is that you learn and come back stronger.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-logo">GetIndustryReady</span>
+                <p class="footer-text">Helping tier-2 & tier-3 students get the interviews they deserve.</p>
+            </div>
+            <a href="#signup-form" class="footer-cta">
+                Enroll Now - It's Free
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20" height="20">
+                    <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('signup-form-element');
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                let isValid = true;
+
+                // Clear previous errors
+                form.querySelectorAll('.form-group').forEach(group => {
+                    group.classList.remove('error');
+                    const errorMsg = group.querySelector('.error-message');
+                    if (errorMsg) errorMsg.textContent = '';
+                });
+
+                // Validate name
+                const name = form.querySelector('#name');
+                if (name.value.trim().length < 2) {
+                    showError(name, 'Please enter your full name');
+                    isValid = false;
+                }
+
+                // Validate phone
+                const phone = form.querySelector('#phone');
+                const phoneRegex = /^[0-9]{10}$/;
+                if (!phoneRegex.test(phone.value.trim())) {
+                    showError(phone, 'Please enter a valid 10-digit phone number');
+                    isValid = false;
+                }
+
+                // Validate email
+                const email = form.querySelector('#email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value.trim())) {
+                    showError(email, 'Please enter a valid email address');
+                    isValid = false;
+                }
+
+                // Validate year
+                const year = form.querySelector('#year');
+                if (!year.value) {
+                    showError(year, 'Please select your year');
+                    isValid = false;
+                }
+
+                // Validate college
+                const college = form.querySelector('#college');
+                if (college.value.trim().length < 3) {
+                    showError(college, 'Please enter your college name');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                }
+            });
+
+            function showError(input, message) {
+                const formGroup = input.closest('.form-group');
+                formGroup.classList.add('error');
+                const errorMsg = formGroup.querySelector('.error-message');
+                if (errorMsg) errorMsg.textContent = message;
+            }
+
+            // Real-time validation on blur
+            form.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('blur', function() {
+                    const formGroup = this.closest('.form-group');
+                    formGroup.classList.remove('error');
+                    const errorMsg = formGroup.querySelector('.error-message');
+                    if (errorMsg) errorMsg.textContent = '';
+                });
+            });
+        }
+    });
+    </script>
 </body>
 </html>

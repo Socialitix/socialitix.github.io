@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why are you not placed yet?</title>
     <meta name="description" content="A quick poll for engineering students. One question. 30 seconds.">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Why are you not placed yet?">
     <meta property="og:description" content="A quick poll for engineering students. One question. 30 seconds. No pitch.">
@@ -14,24 +14,57 @@
     <meta property="og:image" content="https://socialitix.org/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Why are you not placed yet?">
     <meta name="twitter:description" content="A quick poll for engineering students. One question. 30 seconds. No pitch.">
     <meta name="twitter:image" content="https://socialitix.org/og-image.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    
+
+		<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1222758446473510');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1222758446473510&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+	<script type="text/javascript">
+	(function(c,l,a,r,i,t,y){
+		c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+		t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+		y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+	})(window, document, "clarity", "script", "v0l3mdp56i");
+	</script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXX2KDSDVL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MXX2KDSDVL');
+    </script>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --bg: #FDF8F3;
             --card: #FFFFFF;
@@ -43,7 +76,7 @@
             --accent-light: #FEF4EE;
             --accent-glow: rgba(201, 123, 74, 0.15);
         }
-        
+
         body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
@@ -53,26 +86,26 @@
             justify-content: center;
             padding: 24px 16px;
         }
-        
+
         .container {
             width: 100%;
             max-width: 420px;
         }
-        
+
         .stage {
             display: none;
             animation: fadeIn 0.3s ease;
         }
-        
+
         .stage.active {
             display: block;
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+
         /* Options */
         .poll-header {
             font-size: 24px;
@@ -82,13 +115,13 @@
             margin-bottom: 24px;
             line-height: 1.3;
         }
-        
+
         .options {
             display: flex;
             flex-direction: column;
             gap: 14px;
         }
-        
+
         .btn-na {
             width: 100%;
             margin-top: 20px;
@@ -103,13 +136,13 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-        
+
         .btn-na:hover {
             background: var(--card);
             border-color: var(--border-hover);
             color: var(--text);
         }
-        
+
         .btn-back-link {
             display: block;
             margin-top: 20px;
@@ -122,21 +155,21 @@
             padding: 0;
             transition: color 0.2s ease;
         }
-        
+
         .btn-back-link:hover {
             color: var(--text);
         }
-        
+
         .option {
             position: relative;
         }
-        
+
         .option input {
             position: absolute;
             opacity: 0;
             cursor: pointer;
         }
-        
+
         .option label {
             display: block;
             padding: 20px 22px;
@@ -150,19 +183,19 @@
             color: var(--text);
             box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
-        
+
         .option label:hover {
             border-color: var(--border-hover);
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
-        
+
         .option input:checked + label {
             border-color: var(--accent);
             background: var(--accent-light);
             box-shadow: 0 0 0 4px var(--accent-glow);
         }
-        
+
         /* Stage text */
         .stage-title {
             font-size: 22px;
@@ -171,21 +204,21 @@
             margin-bottom: 8px;
             line-height: 1.3;
         }
-        
+
         .stage-subtext {
             font-size: 15px;
             color: var(--text-soft);
             margin-bottom: 20px;
             line-height: 1.5;
         }
-        
+
         /* Buttons */
         .btn-row {
             display: flex;
             gap: 12px;
             margin-top: 20px;
         }
-        
+
         .btn {
             flex: 1;
             padding: 16px 24px;
@@ -197,34 +230,34 @@
             font-family: inherit;
             transition: all 0.2s ease;
         }
-        
+
         .btn-primary {
             background: var(--accent);
             color: #FFFFFF;
         }
-        
+
         .btn-primary:hover {
             background: #B56B3C;
             transform: translateY(-1px);
         }
-        
+
         .btn-primary:disabled {
             background: #A89F94;
             cursor: default;
             transform: none;
         }
-        
+
         .btn-ghost {
             background: transparent;
             color: var(--text-soft);
             border: 2px solid var(--border);
         }
-        
+
         .btn-ghost:hover {
             background: var(--card);
             border-color: var(--border-hover);
         }
-        
+
         /* Email input */
         input[type="email"] {
             width: 100%;
@@ -237,45 +270,45 @@
             color: var(--text);
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         input[type="email"]:focus {
             outline: none;
             border-color: var(--accent);
             box-shadow: 0 0 0 4px var(--accent-glow);
         }
-        
+
         input[type="email"]::placeholder {
             color: #A89F94;
         }
-        
+
         input[type="email"]:disabled {
             background: var(--bg);
             color: var(--text-soft);
         }
-        
+
         /* Thank you header */
         .thank-you-header {
             text-align: center;
             margin-bottom: 24px;
         }
-        
+
         .thank-you-emoji {
             font-size: 48px;
             margin-bottom: 12px;
         }
-        
+
         .thank-you-header .stage-title {
             margin-bottom: 8px;
         }
-        
+
         .thank-you-header .stage-subtext {
             margin-bottom: 0;
         }
-        
+
         .thank-you-header + input[type="tel"] {
             margin-top: 20px;
         }
-        
+
         /* LinkedIn section */
         .linkedin-section {
             text-align: center;
@@ -283,13 +316,13 @@
             padding-top: 24px;
             border-top: 1px solid var(--border);
         }
-        
+
         .linkedin-section p {
             font-size: 14px;
             color: var(--text-soft);
             margin-bottom: 12px;
         }
-        
+
         .linkedin-btn {
             display: inline-block;
             padding: 14px 28px;
@@ -301,7 +334,7 @@
             border-radius: 12px;
             transition: all 0.2s ease;
         }
-        
+
         .linkedin-btn:hover {
             background: #004182;
             transform: translateY(-1px);
@@ -310,7 +343,7 @@
 </head>
 <body>
     <div class="container">
-        
+
         <!-- Stage 1: Poll -->
         <div class="stage active" id="stage1">
             <h1 class="poll-header">Why are you not placed yet?</h1>
@@ -330,7 +363,7 @@
             </div>
             <button class="btn-na" id="btnNA">Not applicable to me</button>
         </div>
-        
+
         <!-- Stage 2: Solution Poll -->
         <div class="stage" id="stage2">
             <h2 class="stage-title">Which would help you most?</h2>
@@ -350,7 +383,7 @@
             </div>
             <button class="btn-back-link" id="back1">← Back</button>
         </div>
-        
+
         <!-- Stage 3: Thank You + Email -->
         <div class="stage" id="stage3">
             <div class="thank-you-header">
@@ -370,7 +403,7 @@
                 </a>
             </div>
         </div>
-        
+
         <!-- Hidden Netlify Form -->
         <form name="poll" netlify netlify-honeypot="bot-field" hidden>
             <input type="text" name="main_struggle">
@@ -380,7 +413,7 @@
             <input type="text" name="stage">
         </form>
     </div>
-    
+
     <script>
         // Shuffle options on load for both polls
         document.querySelectorAll('.options').forEach(container => {
@@ -391,7 +424,7 @@
             }
             options.forEach(opt => container.appendChild(opt));
         });
-        
+
         // State
         let currentStage = 1;
         let responses = {
@@ -400,13 +433,13 @@
             email: '',
             timestamp: new Date().toISOString()
         };
-        
+
         const stages = {
             1: document.getElementById('stage1'),
             2: document.getElementById('stage2'),
             3: document.getElementById('stage3')
         };
-        
+
         // Stage 1: Auto-advance on problem select
         document.querySelectorAll('input[name="main_struggle"]').forEach(radio => {
             radio.addEventListener('change', (e) => {
@@ -421,7 +454,7 @@
                 goToStage(2);
             });
         });
-        
+
         // Not Applicable button
         document.getElementById('btnNA').addEventListener('click', () => {
             responses.main_struggle = 'Not applicable';
@@ -434,7 +467,7 @@
             });
             goToStage(3);
         });
-        
+
         // Stage 2: Auto-advance on solution select
         document.querySelectorAll('input[name="preferred_solution"]').forEach(radio => {
             radio.addEventListener('change', (e) => {
@@ -449,29 +482,29 @@
                 goToStage(3);
             });
         });
-        
+
         // Back buttons
         document.getElementById('back1').addEventListener('click', () => {
             goToStage(1);
         });
-        
+
         document.getElementById('back2').addEventListener('click', () => {
             goToStage(2);
         });
-        
+
         // Stage 3 - Final submit
         document.getElementById('btn3').addEventListener('click', async () => {
             const btn = document.getElementById('btn3');
             const backBtn = document.getElementById('back2');
             const input = document.getElementById('email');
-            
+
             responses.email = input.value || '[empty]';
-            
+
             btn.textContent = 'Sent ✓';
             btn.disabled = true;
             backBtn.style.display = 'none';
             input.disabled = true;
-            
+
             await submitToNetlify({
                 main_struggle: responses.main_struggle,
                 preferred_solution: responses.preferred_solution,
@@ -480,13 +513,13 @@
                 stage: '3-complete'
             });
         });
-        
+
         function goToStage(n) {
             stages[currentStage].classList.remove('active');
             stages[n].classList.add('active');
             currentStage = n;
         }
-        
+
         async function submitToNetlify(data) {
             try {
                 const fd = new FormData();

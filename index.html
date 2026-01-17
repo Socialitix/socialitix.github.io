@@ -3,1947 +3,500 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetIndustryReady | Get the Interview You Deserve</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <!-- Open Graph / Facebook -->
-    <meta name="description" content="A fair, proctored challenge for engineering students. Top performers get interviews with Cognizant and Infosys. No college name bias. Just your skills.">
+    <title>Why are you not placed yet?</title>
+    <meta name="description" content="A quick poll for engineering students. One question. 30 seconds.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Why are you not placed yet?">
+    <meta property="og:description" content="A quick poll for engineering students. One question. 30 seconds. No pitch.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://socialitix.org/">
-    <meta property="og:title" content="Less skilled people are getting shortlisted. You're not. Here's why.">
-    <meta property="og:description" content="The system filters you out before anyone sees what you can do.">
     <meta property="og:image" content="https://socialitix.org/og-image.png">
-
-    <!-- Twitter -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://socialitix.org/">
-    <meta name="twitter:title" content="Less skilled people are getting shortlisted. You're not. Here's why.">
-    <meta name="twitter:description" content="The system filters you out before anyone sees what you can do.">
+    <meta name="twitter:title" content="Why are you not placed yet?">
+    <meta name="twitter:description" content="A quick poll for engineering students. One question. 30 seconds. No pitch.">
     <meta name="twitter:image" content="https://socialitix.org/og-image.png">
-
-    <link rel="canonical" href="https://socialitix.org/">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Hari">   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1222758446473510');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1222758446473510&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-	<script type="text/javascript">
-	(function(c,l,a,r,i,t,y){
-		c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-		t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-		y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-	})(window, document, "clarity", "script", "v0l3mdp56i");
-	</script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXX2KDSDVL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MXX2KDSDVL');
-    </script>
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
-            --bg-light: #F8FAFC;
-            --text-primary: #1E293B;
-            --text-secondary: #64748B;
-            --primary: #2563EB;
-            --primary-hover: #1D4ED8;
-            --success: #059669;
-            --border: #E2E8F0;
-            --card-bg: #FFFFFF;
+            --bg: #FDF8F3;
+            --card: #FFFFFF;
+            --border: #E8DDD4;
+            --border-hover: #D4C4B5;
+            --text: #2D2A26;
+            --text-soft: #6B645B;
+            --accent: #C97B4A;
+            --accent-light: #FEF4EE;
+            --accent-glow: rgba(201, 123, 74, 0.15);
         }
-
+        
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-light);
-            color: var(--text-primary);
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
             min-height: 100vh;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        /* Top Banner - 44px */
-        .top-banner {
-            height: 24px;
-            width: 100%;
-            background: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            padding: 24px 16px;
         }
-
-        .top-banner p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 13px;
-            font-weight: 500;
-        }
-
-        .top-banner a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        .top-banner a:hover {
-            opacity: 0.85;
-        }
-
-        /* Header - 100px */
-        .header {
-            height: 100px;
+        
+        .container {
             width: 100%;
-            padding: 0 48px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--card-bg);
-            border-bottom: 1px solid var(--border);
+            max-width: 420px;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--primary);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo-icon svg {
-            width: 20px;
-            height: 20px;
-            color: #ffffff;
-        }
-
-        .logo-text {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
-        }
-
-        .company-logos {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .company-logos-label {
-            font-size: 11px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-        }
-
-        .company-logo-item {
-            padding: 6px 14px;
-            background: var(--bg-light);
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        /* Hero Section - 500px */
-        .hero {
-            height: 500px;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-bg-desktop {
-            position: absolute;
-            inset: 0;
-            background: url('desktopbg.jpg') top center/cover no-repeat;
-        }
-
-        .hero-gradient-desktop {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(10, 10, 10, 0.0) 20%, rgba(10, 10, 10, 0.5) 35%, rgb(10, 10, 10) 60%);
-        }
-
-        /* Mobile image - hidden on desktop */
-        .hero-mobile-image {
+        
+        .stage {
             display: none;
+            animation: fadeIn 0.3s ease;
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 80px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* Text Section - Bottom aligned */
-        .text-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding-bottom: 48px;
-            width: 55%;
-            max-width: none;
-        }
-
-        .headline {
-            font-size: 36px;
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -0.03em;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        .headline em {
-            font-style: normal;
-            color: var(--success);
-        }
-
-        .subhead {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 28px;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        /* Bullet Points 2x2 */
-        .bullet-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-
-        .bullet-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-        }
-
-        .bullet-check {
-            width: 16px;
-            height: 16px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 3px;
-        }
-
-        .bullet-check svg {
-            width: 16px;
-            height: 16px;
-            color: #ffffff;
-        }
-
-        /* Form Section - Center aligned */
-        .form-section {
-            display: flex;
-            align-items: center;
-        }
-
-        .form-card {
-            background: var(--card-bg);
-            border: none;
-            border-radius: 0;
-            padding: 32px;
-            width: 500px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .form-header {
-            margin-bottom: 24px;
-        }
-
-        .form-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: var(--text-primary);
-        }
-
-        .form-subtitle {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .form-subtitle strong {
-            color: var(--success);
-            font-weight: 600;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group.full-width {
-            grid-column: span 2;
-        }
-
-        .form-group input,
-        .form-group select {
-            background: #FFFFFF;
-            border: 1px solid #CBD5E1;
-            border-radius: 6px;
-            padding: 10px 12px;
-            font-size: 14px;
-            color: var(--text-primary);
-            font-family: inherit;
-            transition: border-color 0.2s, box-shadow 0.2s;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .form-group input::placeholder {
-            color: #94A3B8;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-        }
-
-        .form-group select {
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231E293B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-            padding-right: 36px;
-        }
-
-        .form-group select option {
-            background: var(--card-bg);
-            color: var(--text-primary);
-        }
-
-        .error-message {
-            display: none;
-            color: #DC2626;
-            font-size: 12px;
-            margin-top: 4px;
-        }
-
-        .form-group.error input,
-        .form-group.error select {
-            border-color: #DC2626;
-        }
-
-        .form-group.error .error-message {
+        
+        .stage.active {
             display: block;
         }
-
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        .terms-text {
-            font-size: 11px;
-            color: var(--text-secondary);
-            margin-top: 20px;
-            margin-bottom: 16px;
-            line-height: 1.5;
-        }
-
-        .terms-text a {
-            color: var(--text-secondary);
-            text-decoration: underline;
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: var(--primary);
-            color: #ffffff;
-            border: none;
-            border-radius: 8px;
-            padding: 14px 24px;
-            font-size: 15px;
+        
+        /* Options */
+        .poll-header {
+            font-size: 24px;
             font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-            font-family: inherit;
-        }
-
-        .submit-btn:hover {
-            background: var(--primary-hover);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Timeline Section */
-        .timeline-section {
-            background: var(--primary);
-            padding: 60px 80px;
-            color: #ffffff;
-        }
-
-        .timeline-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .timeline-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        .timeline-subtitle {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 48px;
-        }
-
-        .timeline {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 24px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .timeline-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            color: var(--text);
             text-align: center;
-            position: relative;
-            flex: 1;
+            margin-bottom: 24px;
+            line-height: 1.3;
         }
-
-        .timeline-dot {
-            width: 48px;
-            height: 48px;
-            background: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            z-index: 1;
-        }
-
-        .timeline-dot svg {
-            width: 24px;
-            height: 24px;
-            color: var(--primary);
-        }
-
-        .timeline-date {
-            font-size: 14px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 4px;
-        }
-
-        .timeline-label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .timeline-desc {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 140px;
-            line-height: 1.5;
-        }
-
-        .timeline-item-content {
+        
+        .options {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            gap: 14px;
         }
-
-        /* Traits Section */
-        .traits-section {
-            background: #ffffff;
-            padding: 60px 80px;
-        }
-
-        .traits-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .traits-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-        }
-
-        .traits-subtitle {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-        }
-
-        .traits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .trait-card {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-        }
-
-        .trait-card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .trait-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .trait-icon svg {
-            width: 20px;
-            height: 20px;
-            color: #ffffff;
-        }
-
-        .trait-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .trait-desc {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* Resources Section */
-        .resources-section {
-            background: var(--bg-light);
-            padding: 60px 80px;
-        }
-
-        .resources-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .resources-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-        }
-
-        .resources-subtitle {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-        }
-
-        .faq-item {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            margin-bottom: 12px;
-            overflow: hidden;
-        }
-
-        .faq-question {
+        
+        .btn-na {
             width: 100%;
-            padding: 20px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-top: 20px;
+            padding: 16px 24px;
+            background: transparent;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-soft);
+            font-size: 15px;
+            font-weight: 500;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-na:hover {
+            background: var(--card);
+            border-color: var(--border-hover);
+            color: var(--text);
+        }
+        
+        .btn-back-link {
+            display: block;
+            margin-top: 20px;
             background: none;
             border: none;
+            color: var(--text-soft);
+            font-size: 14px;
+            font-family: inherit;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s ease;
+        }
+        
+        .btn-back-link:hover {
+            color: var(--text);
+        }
+        
+        .option {
+            position: relative;
+        }
+        
+        .option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .option label {
+            display: block;
+            padding: 20px 22px;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        
+        .option label:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        
+        .option input:checked + label {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+        }
+        
+        /* Stage text */
+        .stage-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .stage-subtext {
+            font-size: 15px;
+            color: var(--text-soft);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        /* Buttons */
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 16px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
             cursor: pointer;
             font-family: inherit;
-            text-align: left;
+            transition: all 0.2s ease;
         }
-
-        .faq-question span {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #FFFFFF;
         }
-
-        .faq-question svg {
-            width: 20px;
-            height: 20px;
-            color: var(--text-secondary);
-            transition: transform 0.3s;
+        
+        .btn-primary:hover {
+            background: #B56B3C;
+            transform: translateY(-1px);
         }
-
-        .faq-item.open .faq-question svg {
-            transform: rotate(180deg);
+        
+        .btn-primary:disabled {
+            background: #A89F94;
+            cursor: default;
+            transform: none;
         }
-
-        .faq-answer {
-            display: none;
-            padding: 0 24px 20px;
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.7;
+        
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-soft);
+            border: 2px solid var(--border);
         }
-
-        .faq-item.open .faq-answer {
-            display: block;
+        
+        .btn-ghost:hover {
+            background: var(--card);
+            border-color: var(--border-hover);
         }
-
-        /* Leader Section */
-        .leader-section {
-            background: var(--bg-light);
-            padding: 60px 80px;
-        }
-
-        .leader-content {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            gap: 48px;
-            align-items: center;
-        }
-
-        .leader-image {
-            width: 200px;
-            height: 200px;
-            background: var(--primary);
+        
+        /* Email input */
+        input[type="email"] {
+            width: 100%;
+            padding: 18px;
+            font-size: 16px;
+            font-family: inherit;
+            border: 2px solid var(--border);
             border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+            background: var(--card);
+            color: var(--text);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
-
-        .leader-image svg {
-            width: 80px;
-            height: 80px;
-            color: #ffffff;
+        
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-glow);
         }
-
-        .leader-info {
-            flex: 1;
+        
+        input[type="email"]::placeholder {
+            color: #A89F94;
         }
-
-        .leader-label {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 8px;
+        
+        input[type="email"]:disabled {
+            background: var(--bg);
+            color: var(--text-soft);
         }
-
-        .leader-name {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 8px;
+        
+        /* Thank you header */
+        .thank-you-header {
+            text-align: center;
+            margin-bottom: 24px;
         }
-
-        .leader-title {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-
-        .leader-bio {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .leader-linkedin {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #0A66C2;
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        .leader-linkedin:hover {
-            opacity: 0.9;
-        }
-
-        .leader-linkedin svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        /* General FAQ Section */
-        .general-faq-section {
-            background: #ffffff;
-            padding: 60px 80px;
-        }
-
-        .general-faq-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .general-faq-title {
-            font-size: 28px;
-            font-weight: 700;
+        
+        .thank-you-emoji {
+            font-size: 48px;
             margin-bottom: 12px;
-            color: var(--text-primary);
         }
-
-        .general-faq-subtitle {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
+        
+        .thank-you-header .stage-title {
+            margin-bottom: 8px;
         }
-
-        /* Footer */
-        .footer {
-            background: #000000;
-            padding: 48px 80px;
-            color: #ffffff;
+        
+        .thank-you-header .stage-subtext {
+            margin-bottom: 0;
         }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        
+        .thank-you-header + input[type="tel"] {
+            margin-top: 20px;
         }
-
-        .footer-left {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+        
+        /* LinkedIn section */
+        .linkedin-section {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
         }
-
-        .footer-logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .footer-text {
+        
+        .linkedin-section p {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text-soft);
+            margin-bottom: 12px;
         }
-
-        .footer-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--primary);
-            color: #ffffff;
+        
+        .linkedin-btn {
+            display: inline-block;
             padding: 14px 28px;
-            border-radius: 8px;
+            background: #0A66C2;
+            color: white;
             text-decoration: none;
+            font-weight: 600;
             font-size: 15px;
-            font-weight: 600;
-            transition: background 0.2s, transform 0.2s;
+            border-radius: 12px;
+            transition: all 0.2s ease;
         }
-
-        .footer-cta:hover {
-            background: var(--primary-hover);
-            transform: translateY(-2px);
-        }
-
-        /* Assessment Section */
-        .assessment-section {
-            background: #ffffff;
-            padding: 60px 80px;
-            color: #000000;
-        }
-
-        .assessment-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .assessment-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #000000;
-        }
-
-        .assessment-subtitle {
-            font-size: 16px;
-            color: rgba(0, 0, 0, 0.6);
-            margin-bottom: 40px;
-        }
-
-        .assessment-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .assessment-card {
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            padding: 32px;
-        }
-
-        .assessment-card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-        }
-
-        .assessment-card-title-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .assessment-icon {
-            width: 28px;
-            height: 28px;
-            color: #000000;
-        }
-
-        .assessment-card-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #000000;
-        }
-
-        .assessment-card-percent {
-            font-size: 32px;
-            font-weight: 700;
-            color: #000000;
-        }
-
-        .assessment-card-desc {
-            font-size: 14px;
-            color: rgba(0, 0, 0, 0.6);
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        .assessment-details {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .assessment-details li {
-            font-size: 13px;
-            color: rgba(0, 0, 0, 0.7);
-            padding: 6px 0;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .assessment-details li:last-child {
-            padding-bottom: 0;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 900px) {
-            /* Hero restructure for mobile */
-            .hero {
-                height: auto;
-                min-height: auto;
-                display: flex;
-                flex-direction: column;
-                background: rgb(10, 10, 10);
-            }
-
-            /* Hide desktop backgrounds */
-            .hero-bg-desktop,
-            .hero-gradient-desktop {
-                display: none;
-            }
-
-            /* Show mobile image section */
-            .hero-mobile-image {
-                display: block;
-                position: relative;
-                width: 100%;
-                height: 180px;
-                background: url('interviewbg.jpg') top center/cover no-repeat;
-                flex-shrink: 0;
-            }
-
-            .hero-mobile-gradient {
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(180deg, rgba(10, 10, 10, 0.0) 0%, rgba(10, 10, 10, 0.3) 40%, rgba(10, 10, 10, 0.7) 70%, rgb(10, 10, 10) 100%);
-            }
-
-            .hero-content {
-                flex-direction: column;
-                padding: 0;
-                height: auto;
-                position: relative;
-                z-index: 1;
-                margin-top: 0;
-            }
-
-            /* Text Section */
-            .text-section {
-                background: rgb(10, 10, 10);
-                padding: 16px 24px 24px;
-                width: 100%;
-                max-width: none;
-                justify-content: flex-start;
-            }
-
-            .headline {
-                font-size: 36px;
-                margin-bottom: 8px;
-                text-align: center;
-            }
-
-            .subhead {
-                font-size: 13px;
-                margin-bottom: 16px;
-                text-align: center;
-            }
-
-            /* Single column bullet grid */
-            .bullet-grid {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-
-            .bullet-item {
-                font-size: 13px;
-            }
-
-            /* Form Section - White container below hero */
-            .form-section {
-                background: var(--card-bg);
-                margin: 24px;
-                padding: 24px;
-                width: auto;
-            }
-
-            .form-card {
-                width: 100%;
-                max-width: 100%;
-                padding: 0;
-                box-shadow: none;
-                background: var(--card-bg);
-            }
-
-            /* Single column form grid */
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-group.full-width {
-                grid-column: span 1;
-            }
-
-            /* Header responsive */
-            .header {
-                height: auto;
-                padding: 16px 20px;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .company-logos {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 8px;
-            }
-
-            .company-logos-label {
-                width: 100%;
-                text-align: center;
-            }
-
-            .company-logo-item {
-                padding: 4px 10px;
-                font-size: 11px;
-            }
-
-            /* Top banner responsive */
-            .top-banner {
-                height: auto;
-                padding: 10px 16px;
-                flex-direction: column;
-                gap: 4px;
-                text-align: center;
-            }
-
-            .top-banner p {
-                font-size: 12px;
-            }
-
-            /* Timeline section mobile */
-            .timeline-section {
-                padding: 40px 24px;
-            }
-
-            .timeline-title {
-                font-size: 24px;
-                text-align: center;
-            }
-
-            .timeline-subtitle {
-                font-size: 14px;
-                text-align: center;
-                margin-bottom: 32px;
-            }
-
-            .timeline {
-                flex-direction: column;
-                gap: 32px;
-            }
-
-            .timeline::before {
-                top: 0;
-                bottom: 0;
-                left: 24px;
-                right: auto;
-                width: 2px;
-                height: auto;
-            }
-
-            .timeline-item {
-                flex-direction: row;
-                align-items: flex-start;
-                text-align: left;
-                gap: 16px;
-            }
-
-            .timeline-dot {
-                width: 48px;
-                height: 48px;
-                flex-shrink: 0;
-                margin-bottom: 0;
-            }
-
-            .timeline-desc {
-                max-width: none;
-            }
-
-            .timeline-item-content {
-                align-items: flex-start;
-            }
-
-            /* Assessment section mobile */
-            .assessment-section {
-                padding: 40px 24px;
-            }
-
-            .assessment-title {
-                font-size: 24px;
-                text-align: center;
-            }
-
-            .assessment-subtitle {
-                font-size: 14px;
-                text-align: center;
-                margin-bottom: 32px;
-            }
-
-            .assessment-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .assessment-card {
-                padding: 24px;
-            }
-
-            .assessment-icon {
-                width: 24px;
-                height: 24px;
-            }
-
-            .assessment-card-title {
-                font-size: 18px;
-            }
-
-            .assessment-card-percent {
-                font-size: 28px;
-            }
-
-            /* Traits section mobile */
-            .traits-section {
-                padding: 40px 24px;
-            }
-
-            .traits-title {
-                font-size: 24px;
-                text-align: center;
-            }
-
-            .traits-subtitle {
-                font-size: 14px;
-                text-align: center;
-            }
-
-            .traits-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .trait-card {
-                padding: 20px;
-            }
-
-            /* Resources section mobile */
-            .resources-section {
-                padding: 40px 24px;
-            }
-
-            .resources-title {
-                font-size: 24px;
-                text-align: center;
-            }
-
-            .resources-subtitle {
-                font-size: 14px;
-                text-align: center;
-            }
-
-            /* Leader section mobile */
-            .leader-section {
-                padding: 40px 24px;
-            }
-
-            .leader-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 24px;
-            }
-
-            .leader-image {
-                width: 120px;
-                height: 120px;
-            }
-
-            .leader-image svg {
-                width: 48px;
-                height: 48px;
-            }
-
-            .leader-name {
-                font-size: 24px;
-            }
-
-            /* General FAQ section mobile */
-            .general-faq-section {
-                padding: 40px 24px;
-            }
-
-            .general-faq-title {
-                font-size: 24px;
-                text-align: center;
-            }
-
-            .general-faq-subtitle {
-                font-size: 14px;
-                text-align: center;
-            }
-
-            /* Footer mobile */
-            .footer {
-                padding: 32px 24px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 24px;
-            }
-
-            .footer-left {
-                align-items: center;
-            }
+        
+        .linkedin-btn:hover {
+            background: #004182;
+            transform: translateY(-1px);
         }
     </style>
 </head>
 <body>
-    <!-- Top Banner - 44px -->
-    <div class="top-banner">
-        <a href="https://wa.me/?text=Hey%2C%20check%20this%20out%20-%20top%20performers%20get%20real%20interviews%20with%20Cognizant%20%26%20Infosys.%20No%20college%20bias.%20Free%20to%20join.%20https%3A%2F%2Fgetindustryready.com" target="_blank">Invite your friends</a>
-    </div>
-
-    <!-- Header - 100px -->
-    <header class="header">
-        <div class="logo">
-            <div class="logo-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z"/>
-                    <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z"/>
-                    <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z"/>
-                </svg>
+    <div class="container">
+        
+        <!-- Stage 1: Poll -->
+        <div class="stage active" id="stage1">
+            <h1 class="poll-header">Why are you not placed yet?</h1>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" id="opt1" name="main_struggle" value="Less skilled getting placed by cheating">
+                    <label for="opt1">Less skilled people are getting placed by cheating</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="opt2" name="main_struggle" value="Luck not skill">
+                    <label for="opt2">It takes luck to get placed, not skill</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="opt3" name="main_struggle" value="College name decides">
+                    <label for="opt3">My college name decides my future, not my work</label>
+                </div>
             </div>
-            <span class="logo-text">GetIndustryReady</span>
+            <button class="btn-na" id="btnNA">Not applicable to me</button>
         </div>
-        <div class="company-logos">
-            <span class="company-logos-label">Interview Partners</span>
-            <span class="company-logo-item">Cognizant</span>
-            <span class="company-logo-item">Infosys</span>
+        
+        <!-- Stage 2: Solution Poll -->
+        <div class="stage" id="stage2">
+            <h2 class="stage-title">Which would help you most?</h2>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" id="sol1" name="preferred_solution" value="Offline proctored assessment">
+                    <label for="sol1"><strong>Offline, proctored assessment</strong> — no cheating, same rules for all</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="sol2" name="preferred_solution" value="Direct interviews">
+                    <label for="sol2"><strong>Direct interviews with companies</strong> — skills get you in, not connections</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="sol3" name="preferred_solution" value="Clear feedback">
+                    <label for="sol3"><strong>Clear feedback from someone who's hired</strong> — know exactly where you stand</label>
+                </div>
+            </div>
+            <button class="btn-back-link" id="back1">← Back</button>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg-desktop"></div>
-        <div class="hero-gradient-desktop"></div>
-
-        <!-- Mobile Image Section -->
-        <div class="hero-mobile-image">
-            <div class="hero-mobile-gradient"></div>
-        </div>
-
-        <div class="hero-content">
-            <!-- Text Section -->
-            <div class="text-section">
-                <h1 class="headline">Get the interview <em>you deserve.</em></h1>
-                <p class="subhead">No resume filters. No college bias. No cheaters. No referrals needed. Just your code.</p>
-
-                <div class="bullet-grid">
-                    <div class="bullet-item">
-                        <span class="bullet-check">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                        <span>Direct interviews with Cognizant and Infosys (6-8 LPA)</span>
-                    </div>
-                    <div class="bullet-item">
-                        <span class="bullet-check">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                        <span>Everyone gets feedback from ex-Amazon SDE</span>
-                    </div>
-                    <div class="bullet-item">
-                        <span class="bullet-check">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                        <span>In-person proctored - same rules for all</span>
-                    </div>
-                    <div class="bullet-item">
-                        <span class="bullet-check">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                            </svg>
-                        </span>
-                        <span>For tier-2 & tier-3 students only</span>
-                    </div>
-                </div>
+        
+        <!-- Stage 3: Thank You + Email -->
+        <div class="stage" id="stage3">
+            <div class="thank-you-header">
+                <div class="thank-you-emoji">🤝</div>
+                <h2 class="stage-title">Thank you for sharing</h2>
+                <p class="stage-subtext">You're not alone in this. Want to stay in touch?</p>
             </div>
-
-            <!-- Form Section -->
-            <div class="form-section" id="signup-form">
-                <div class="form-card">
-                    <div class="form-header">
-                        <h3 class="form-title">Get your interview slot</h3>
-                        <p class="form-subtitle">February 2025 · Chennai · <strong>Free to join</strong></p>
-                    </div>
-
-                    <form action="/thank-you.html" method="POST" name="signup" data-netlify="true" netlify-honeypot="bot-field" id="signup-form-element">
-                        <input type="hidden" name="form-name" value="signup">
-                        <p class="hidden" style="display:none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                        </p>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2">
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="WhatsApp number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Email address" required>
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <select id="year" name="year" required>
-                                    <option value="" disabled selected>Select year</option>
-                                    <option value="2nd">2nd Year</option>
-                                    <option value="3rd">3rd Year</option>
-                                    <option value="final">Final Year</option>
-                                </select>
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group full-width">
-                                <input type="text" id="college" name="college" placeholder="College name" required minlength="3">
-                                <span class="error-message"></span>
-                            </div>
-                        </div>
-
-                        <p class="terms-text">By clicking the button below, you agree to receive communications via Email/Call/WhatsApp/SMS from GetIndustryReady about this programme and other relevant programs. You also agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
-
-                        <button type="submit" class="submit-btn">Enroll before Jan 20th</button>
-                    </form>
-                </div>
+            <input type="email" id="email" name="email" placeholder="Email (optional)">
+            <div class="btn-row">
+                <button class="btn btn-ghost" id="back2">← Back</button>
+                <button class="btn btn-primary" id="btn3">Done</button>
             </div>
-        </div>
-    </section>
-
-    <!-- Assessment Section -->
-    <section class="assessment-section">
-        <div class="assessment-content">
-            <h2 class="assessment-title">The Assessment</h2>
-            <p class="assessment-subtitle">A 3-hour proctored test designed to evaluate what actually matters in the industry.</p>
-
-            <div class="assessment-grid">
-                <div class="assessment-card">
-                    <div class="assessment-card-header">
-                        <div class="assessment-card-title-row">
-                            <svg class="assessment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/>
-                            </svg>
-                            <h3 class="assessment-card-title">Behavioural</h3>
-                        </div>
-                        <span class="assessment-card-percent">50%</span>
-                    </div>
-                    <p class="assessment-card-desc">Written responses to situational questions based on Amazon Leadership Principles. We evaluate ownership, problem-solving, resilience, and communication.</p>
-                    <ul class="assessment-details">
-                        <li>4 questions, ~100 words each</li>
-                        <li>30 mins per question, 2 hours total</li>
-                        <li>No video, no MCQs, no group discussion</li>
-                        <li>Document real scenarios you've experienced</li>
-                    </ul>
-                </div>
-                <div class="assessment-card">
-                    <div class="assessment-card-header">
-                        <div class="assessment-card-title-row">
-                            <svg class="assessment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <h3 class="assessment-card-title">DSA</h3>
-                        </div>
-                        <span class="assessment-card-percent">50%</span>
-                    </div>
-                    <p class="assessment-card-desc">Timed coding problems testing data structures and algorithms. We're testing if you understand trade-offs, not if you've memorized solutions.</p>
-                    <ul class="assessment-details">
-                        <li>2 problems, 30 mins each, 1 hour total</li>
-                        <li>Test cases + written explanation of approach</li>
-                        <li>Difficulty: 1 medium, 1 medium-hard</li>
-                        <li>Arrays, trees, graphs, heaps, hash maps</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="timeline-content">
-            <h2 class="timeline-title">The Process</h2>
-            <p class="timeline-subtitle">From enrollment to interview - here's how it works.</p>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="timeline-item-content">
-                        <span class="timeline-date">Jan 20</span>
-                        <span class="timeline-label">Enrollment Closes</span>
-                        <p class="timeline-desc">Register with your details. Limited seats available.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z" clip-rule="evenodd"/>
-                            <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z"/>
-                        </svg>
-                    </div>
-                    <div class="timeline-item-content">
-                        <span class="timeline-date">Jan 25</span>
-                        <span class="timeline-label">Resume Submission</span>
-                        <p class="timeline-desc">Submit your resume for verification.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <div class="timeline-item-content">
-                        <span class="timeline-date">Feb 1</span>
-                        <span class="timeline-label">Background Check</span>
-                        <p class="timeline-desc">We verify your details and experience.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z"/>
-                            <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z"/>
-                        </svg>
-                    </div>
-                    <div class="timeline-item-content">
-                        <span class="timeline-date">Feb 15</span>
-                        <span class="timeline-label">Assessment Day</span>
-                        <p class="timeline-desc">3-hour in-person proctored test in Chennai.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd"/>
-                            <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z"/>
-                        </svg>
-                    </div>
-                    <div class="timeline-item-content">
-                        <span class="timeline-date">Feb 20-28</span>
-                        <span class="timeline-label">Interviews</span>
-                        <p class="timeline-desc">Top performers interview with Cognizant & Infosys.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Traits Section -->
-    <section class="traits-section">
-        <div class="traits-content">
-            <h2 class="traits-title">This is for you if you have these traits</h2>
-            <p class="traits-subtitle">We're looking for the next generation of leaders, not just coders.</p>
-
-            <div class="traits-grid">
-                <div class="trait-card">
-                    <div class="trait-card-header">
-                        <div class="trait-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="trait-name">Innovative</h3>
-                    </div>
-                    <p class="trait-desc">Thinking creatively and coming up with original solutions to complex problems.</p>
-                </div>
-                <div class="trait-card">
-                    <div class="trait-card-header">
-                        <div class="trait-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z" clip-rule="evenodd"/>
-                                <path fill-rule="evenodd" d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="trait-name">Data-driven</h3>
-                    </div>
-                    <p class="trait-desc">Using data and analytics to make decisions and improve software performance.</p>
-                </div>
-                <div class="trait-card">
-                    <div class="trait-card-header">
-                        <div class="trait-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52a1.5 1.5 0 011.227 1.771c-.482 2.482-.828 5.018-1.022 7.585a6.037 6.037 0 00-2.857-.66 6 6 0 00-5.977 5.515 47.824 47.824 0 00-1.023-7.514 1.5 1.5 0 011.227-1.771A49.144 49.144 0 0112 7.5c2.43 0 4.817-.178 7.152-.52a1.5 1.5 0 011.227 1.771A48.94 48.94 0 0019.357 16.5H4.643A48.94 48.94 0 003.62 8.75a1.5 1.5 0 011.227-1.771A49.144 49.144 0 0112 7.5c-2.43 0-4.817.178-7.152.52a1.5 1.5 0 01-1.227-1.771 49.144 49.144 0 017.152-.52z" clip-rule="evenodd"/>
-                                <path d="M12 18a3 3 0 100-6 3 3 0 000 6z"/>
-                            </svg>
-                        </div>
-                        <h3 class="trait-name">Curious</h3>
-                    </div>
-                    <p class="trait-desc">Continuously learning skills and staying up-to-date with industry trends and technologies.</p>
-                </div>
-                <div class="trait-card">
-                    <div class="trait-card-header">
-                        <div class="trait-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="trait-name">Results-driven</h3>
-                    </div>
-                    <p class="trait-desc">Focusing on delivering high-quality results that meet or exceed expectations.</p>
-                </div>
-                <div class="trait-card">
-                    <div class="trait-card-header">
-                        <div class="trait-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="trait-name">Communicative</h3>
-                    </div>
-                    <p class="trait-desc">Communicating effectively with team members, stakeholders, and customers.</p>
-                </div>
-                <div class="trait-card">
-                    <div class="trait-card-header">
-                        <div class="trait-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="trait-name">Accountable</h3>
-                    </div>
-                    <p class="trait-desc">Taking ownership and responsibility for your work and the success of your team.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources Section -->
-    <section class="resources-section">
-        <div class="resources-content">
-            <h2 class="resources-title">Prepare for the Assessment</h2>
-            <p class="resources-subtitle">Everything you need to know to ace both sections of the test.</p>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>What are behavioral questions and how do I score well on them?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    Behavioral questions ask you to share real examples from your past experiences. These questions help us understand how you approach challenges, make decisions, and work with others.<br><br>
-                    We evaluate your responses based on the six core traits we're looking for: <strong>Innovation</strong>, <strong>Data-driven thinking</strong>, <strong>Curiosity</strong>, <strong>Results orientation</strong>, <strong>Communication</strong>, and <strong>Accountability</strong>.<br><br>
-                    We avoid brain teasers like "How many windows are in Manhattan?" because they don't reliably predict success. Instead, we want to hear real stories that demonstrate these traits.<br><br>
-                    <strong>Here are examples of questions you might be asked:</strong><br>
-                    • Tell me about a time you faced a problem with multiple possible solutions. How did you decide what to do, and what was the outcome?<br>
-                    • Describe a time when you took a risk, made a mistake, or failed. What happened, and what did you learn from it?<br>
-                    • Share an example of when you took the lead on a project.<br>
-                    • What did you do to motivate a group or encourage collaboration on a team project?<br>
-                    • How have you used data to develop a strategy or make a decision?
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>How should I structure my answers using the STAR method?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    When you're asked to describe something you've done, we're not looking for a quick answer—we want to hear a complete story. A strong response gives us insight into how you think, act, and problem-solve.<br><br>
-                    Your answer should include:<br>
-                    • <strong>Context</strong> – What was going on, and what was your role?<br>
-                    • <strong>Task</strong> – What were you trying to accomplish?<br>
-                    • <strong>Actions</strong> – What did you specifically do to move things forward?<br>
-                    • <strong>Outcome</strong> – How did it turn out? What did you learn?<br><br>
-                    We don't expect perfect answers or rehearsed scripts. The STAR method is simply a tool to help you organize your thoughts and tell a story that brings your strengths to life.<br><br>
-                    <strong>S = SITUATION</strong><br>
-                    Start by setting the scene. What was going on? Where were you working (or studying or volunteering), and what were you trying to tackle? Give just enough background so we understand the big picture.<br><br>
-                    <strong>T = TASK</strong><br>
-                    What was your goal? What were you responsible for? This helps us understand your role and what you were trying to achieve.<br><br>
-                    <strong>A = ACTION</strong><br>
-                    Walk us through what you did. What steps did you take? How did you approach the challenge? Focus on your individual contributions—use "I" instead of "we."<br><br>
-                    <strong>R = RESULT</strong><br>
-                    How did things turn out? Share what you accomplished and what you learned. If you have numbers or specific outcomes, even better.<br><br>
-                    Remember, not every story has to be a success. We know that failure is part of growth. What matters is what you learned and how you improved.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>What makes a great behavioral answer stand out?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <strong>Think in stories</strong><br>
-                    Each answer should have a beginning, middle, and end. What was the situation? What did you do? What happened next?<br><br>
-                    <strong>Be specific</strong><br>
-                    Use real examples from your past—not generalizations. Give a detailed account of one situation for each question. Focus on what you did, and back it up with data or results if possible.<br><br>
-                    <strong>Balance detail with clarity</strong><br>
-                    Try to be clear and concise, but include enough detail to tell a complete story. ~100 words per answer is the sweet spot.<br><br>
-                    <strong>Show range</strong><br>
-                    Have a few examples ready that highlight different strengths, including times you've taken risks, succeeded, failed, and grown.<br><br>
-                    <strong>Demonstrate the traits we're looking for</strong><br>
-                    Your answers should showcase Innovation, Data-driven thinking, Curiosity, Results orientation, Communication, and Accountability. The best answers naturally weave in multiple traits.<br><br>
-                    <strong>Keep it honest</strong><br>
-                    We're not looking for perfection. We value authenticity, self-awareness, and a willingness to learn. Don't make things up—we do background checks.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>What DSA topics should I prepare and where can I learn them?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <strong>Data Structures to master:</strong><br>
-                    • Arrays and Strings<br>
-                    • Linked Lists (singly, doubly, circular)<br>
-                    • Stacks and Queues<br>
-                    • Hash Tables / Hash Maps<br>
-                    • Trees (Binary Trees, BST, AVL)<br>
-                    • Heaps (Min-Heap, Max-Heap)<br>
-                    • Graphs (adjacency list, adjacency matrix)<br>
-                    • Tries<br><br>
-                    <strong>Algorithms to know:</strong><br>
-                    • Sorting (Quick Sort, Merge Sort, Heap Sort)<br>
-                    • Searching (Binary Search, DFS, BFS)<br>
-                    • Dynamic Programming<br>
-                    • Greedy Algorithms<br>
-                    • Recursion and Backtracking<br>
-                    • Two Pointers and Sliding Window<br>
-                    • Graph algorithms (Dijkstra's, Kruskal's, Prim's)<br><br>
-                    <strong>Recommended Books:</strong><br>
-                    • <em>"Cracking the Coding Interview"</em> by Gayle Laakmann McDowell — The gold standard for interview prep<br>
-                    • <em>"Introduction to Algorithms"</em> (CLRS) — Comprehensive but dense; great for deep understanding<br>
-                    • <em>"Data Structures and Algorithms Made Easy"</em> by Narasimha Karumanchi — Popular in India, beginner-friendly<br>
-                    • <em>"Elements of Programming Interviews"</em> — Advanced problems with detailed solutions<br><br>
-                    <strong>Online Resources:</strong><br>
-                    • LeetCode (practice problems by topic and difficulty)<br>
-                    • GeeksforGeeks (explanations and code examples)<br>
-                    • NeetCode (curated problem lists with video explanations)<br>
-                    • Abdul Bari on YouTube (algorithm visualizations)
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Why is understanding time and space complexity important?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    We don't just want code that works—we want code that's efficient. Understanding complexity is essential because:<br><br>
-                    <strong>Time Complexity (Big O)</strong><br>
-                    This tells us how your algorithm's runtime grows as input size increases. Know the difference between O(1), O(log n), O(n), O(n log n), O(n²), and O(2^n). A solution that works for 100 elements but crashes on 100,000 won't cut it.<br><br>
-                    <strong>Space Complexity</strong><br>
-                    This measures how much additional memory your algorithm needs. Sometimes you can trade space for time (or vice versa). Understanding this trade-off is crucial.<br><br>
-                    <strong>What we expect:</strong><br>
-                    • Analyze the complexity of your solution before coding<br>
-                    • Explain why you chose a particular approach<br>
-                    • Discuss trade-offs between different solutions<br>
-                    • Optimize when possible—brute force is just the starting point<br><br>
-                    <strong>Pro tip:</strong> In your written explanation, always mention the time and space complexity of your solution. This shows you understand the fundamentals, not just the syntax.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leader Section -->
-    <section class="leader-section">
-        <div class="leader-content">
-            <div class="leader-image">
-				<img src="profile.jpg" style ="width:100%; height:100%; border-radius:14px"/>
-            </div>
-            <div class="leader-info">
-                <span class="leader-label">Program Leader</span>
-                <h3 class="leader-name">Hari</h3>
-                <p class="leader-title">Ex-Amazon SDE • MS in AI, Northeastern University</p>
-                <p class="leader-bio">8+ years at Amazon as a Software Development Engineer, consistently rated as a top performer for 7 consecutive years. Conducted 100+ technical interviews using Amazon's Leadership Principles. Now pursuing a Master's in AI and helping tier-2/tier-3 students get the opportunities they deserve.</p>
-                <a href="https://linkedin.com/in/noblenod" target="_blank" class="leader-linkedin">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
+            <div class="linkedin-section">
+                <p>Or connect with me on LinkedIn</p>
+                <a href="https://www.linkedin.com/in/noblenod" target="_blank" class="linkedin-btn">
                     Connect on LinkedIn
                 </a>
             </div>
         </div>
-    </section>
-
-    <!-- General FAQ Section -->
-    <section class="general-faq-section">
-        <div class="general-faq-content">
-            <h2 class="general-faq-title">Frequently Asked Questions</h2>
-            <p class="general-faq-subtitle">Got questions? We've got answers.</p>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Is this a placement guarantee program?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    No. We guarantee interviews for top performers, not placements. The interview is your opportunity - you have to earn the job yourself. We get you in the door; you prove you belong.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Why is this free?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    This is the founding batch. We're building something new and need to prove it works. Your success is our proof of concept. Future batches may have a fee.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Who is this NOT for?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    Students from IITs, BITS, NITs, or other tier-1 colleges. You already have access to the best companies. This is for students who are skilled but don't get the same opportunities because of their college name.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Where is the assessment held?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    Chennai. The exact venue will be shared with registered participants. It's in-person and proctored to ensure fairness - no cheating, no AI assistance, same rules for everyone.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Can I use a laptop or do I need to bring my own?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    Yes, you need to bring your own laptop. Make sure it's fully charged and has a working keyboard. We'll provide the internet connection and testing environment.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>What programming languages can I use for the DSA section?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    You can use C, C++, Java, or Python. Choose the language you're most comfortable with. The problems will be language-agnostic, and we evaluate your logic and problem-solving approach, not your syntax.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>What happens after the assessment?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    We'll evaluate all submissions and share results within a week. Top performers will be connected directly with HR teams at Cognizant and Infosys for interviews. Everyone else will receive detailed feedback on their performance - what you did well, where you need to improve, and specific recommendations.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>How is the background check done?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    We verify the information in your resume and the experiences you mention in your behavioral answers. This includes checking your college enrollment, any projects or internships you mention, and leadership roles you claim. If we find discrepancies, you'll be disqualified. Be honest - it's not worth the risk.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>What if I'm from a college outside Chennai?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    You're welcome to participate as long as you can be physically present in Chennai on the assessment day. We don't cover travel or accommodation costs, so factor that into your decision. For the founding batch, we're focusing on students who can easily reach Chennai.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                    <span>Can I reapply if I don't perform well?</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    Yes. If we run future batches, you can apply again. Use the feedback from this assessment to improve. Many successful candidates didn't make it on their first try - what matters is that you learn and come back stronger.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <span class="footer-logo">GetIndustryReady</span>
-                <p class="footer-text">Helping tier-2 & tier-3 students get the interviews they deserve.</p>
-            </div>
-            <a href="#signup-form" class="footer-cta">
-                Enroll Now - It's Free
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20" height="20">
-                    <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
-                </svg>
-            </a>
-        </div>
-    </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('signup-form-element');
-
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                let isValid = true;
-
-                // Clear previous errors
-                form.querySelectorAll('.form-group').forEach(group => {
-                    group.classList.remove('error');
-                    const errorMsg = group.querySelector('.error-message');
-                    if (errorMsg) errorMsg.textContent = '';
-                });
-
-                // Validate name
-                const name = form.querySelector('#name');
-                if (name.value.trim().length < 2) {
-                    showError(name, 'Please enter your full name');
-                    isValid = false;
-                }
-
-                // Validate phone
-                const phone = form.querySelector('#phone');
-                const phoneRegex = /^[0-9]{10}$/;
-                if (!phoneRegex.test(phone.value.trim())) {
-                    showError(phone, 'Please enter a valid 10-digit phone number');
-                    isValid = false;
-                }
-
-                // Validate email
-                const email = form.querySelector('#email');
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email.value.trim())) {
-                    showError(email, 'Please enter a valid email address');
-                    isValid = false;
-                }
-
-                // Validate year
-                const year = form.querySelector('#year');
-                if (!year.value) {
-                    showError(year, 'Please select your year');
-                    isValid = false;
-                }
-
-                // Validate college
-                const college = form.querySelector('#college');
-                if (college.value.trim().length < 3) {
-                    showError(college, 'Please enter your college name');
-                    isValid = false;
-                }
-
-                if (!isValid) {
-                    e.preventDefault();
-                }
-            });
-
-            function showError(input, message) {
-                const formGroup = input.closest('.form-group');
-                formGroup.classList.add('error');
-                const errorMsg = formGroup.querySelector('.error-message');
-                if (errorMsg) errorMsg.textContent = message;
+        
+        <!-- Hidden Netlify Form -->
+        <form name="poll" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="main_struggle">
+            <input type="text" name="preferred_solution">
+            <input type="text" name="email">
+            <input type="text" name="timestamp">
+            <input type="text" name="stage">
+        </form>
+    </div>
+    
+    <script>
+        // Shuffle options on load for both polls
+        document.querySelectorAll('.options').forEach(container => {
+            const options = Array.from(container.querySelectorAll('.option'));
+            for (let i = options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [options[i], options[j]] = [options[j], options[i]];
             }
-
-            // Real-time validation on blur
-            form.querySelectorAll('input, select').forEach(input => {
-                input.addEventListener('blur', function() {
-                    const formGroup = this.closest('.form-group');
-                    formGroup.classList.remove('error');
-                    const errorMsg = formGroup.querySelector('.error-message');
-                    if (errorMsg) errorMsg.textContent = '';
+            options.forEach(opt => container.appendChild(opt));
+        });
+        
+        // State
+        let currentStage = 1;
+        let responses = {
+            main_struggle: '',
+            preferred_solution: '',
+            email: '',
+            timestamp: new Date().toISOString()
+        };
+        
+        const stages = {
+            1: document.getElementById('stage1'),
+            2: document.getElementById('stage2'),
+            3: document.getElementById('stage3')
+        };
+        
+        // Stage 1: Auto-advance on problem select
+        document.querySelectorAll('input[name="main_struggle"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                responses.main_struggle = e.target.value;
+                submitToNetlify({
+                    main_struggle: responses.main_struggle,
+                    preferred_solution: '',
+                    email: '',
+                    timestamp: responses.timestamp,
+                    stage: '1'
                 });
+                goToStage(2);
             });
+        });
+        
+        // Not Applicable button
+        document.getElementById('btnNA').addEventListener('click', () => {
+            responses.main_struggle = 'Not applicable';
+            submitToNetlify({
+                main_struggle: responses.main_struggle,
+                preferred_solution: '',
+                email: '',
+                timestamp: responses.timestamp,
+                stage: '1-NA'
+            });
+            goToStage(3);
+        });
+        
+        // Stage 2: Auto-advance on solution select
+        document.querySelectorAll('input[name="preferred_solution"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                responses.preferred_solution = e.target.value;
+                submitToNetlify({
+                    main_struggle: responses.main_struggle,
+                    preferred_solution: responses.preferred_solution,
+                    email: '',
+                    timestamp: responses.timestamp,
+                    stage: '2'
+                });
+                goToStage(3);
+            });
+        });
+        
+        // Back buttons
+        document.getElementById('back1').addEventListener('click', () => {
+            goToStage(1);
+        });
+        
+        document.getElementById('back2').addEventListener('click', () => {
+            goToStage(2);
+        });
+        
+        // Stage 3 - Final submit
+        document.getElementById('btn3').addEventListener('click', async () => {
+            const btn = document.getElementById('btn3');
+            const backBtn = document.getElementById('back2');
+            const input = document.getElementById('email');
+            
+            responses.email = input.value || '[empty]';
+            
+            btn.textContent = 'Sent ✓';
+            btn.disabled = true;
+            backBtn.style.display = 'none';
+            input.disabled = true;
+            
+            await submitToNetlify({
+                main_struggle: responses.main_struggle,
+                preferred_solution: responses.preferred_solution,
+                email: responses.email,
+                timestamp: responses.timestamp,
+                stage: '3-complete'
+            });
+        });
+        
+        function goToStage(n) {
+            stages[currentStage].classList.remove('active');
+            stages[n].classList.add('active');
+            currentStage = n;
         }
-    });
+        
+        async function submitToNetlify(data) {
+            try {
+                const fd = new FormData();
+                fd.append('form-name', 'poll');
+                for (const k in data) fd.append(k, data[k]);
+                await fetch('/', { method: 'POST', body: fd });
+            } catch (e) {
+                console.error(e);
+            }
+        }
     </script>
 </body>
 </html>
